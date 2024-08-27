@@ -635,6 +635,7 @@ main {
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
 }
 
 .testimonials-item {
@@ -917,7 +918,7 @@ main {
   padding: 20px;
 }
 
-.extra-skills{
+.extra-skills {
   margin-top: 20px;
 }
 
@@ -1562,6 +1563,7 @@ textarea.form-input::-webkit-resizer {
     margin: 0 -30px;
     padding: 30px;
     padding-bottom: 35px;
+    cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   }
 
   .content-card {
