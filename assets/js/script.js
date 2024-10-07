@@ -164,3 +164,28 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// Function to show the copied message
+const showCopiedMessage = () => {
+  const successMessage = document.createElement("div");
+  successMessage.className = "success-message";
+  successMessage.textContent = "Email Id copied successfully";
+  document.body.appendChild(successMessage);
+  setTimeout(() => {
+    successMessage.remove();
+  }, 3000);
+};
+
+function copyToClipboard() {
+  const tempInput = document.createElement("input");
+  tempInput.value = "aditya.ap2209@gmail.com";
+  document.body.appendChild(tempInput);
+
+  tempInput.select();
+  tempInput.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+
+  document.body.removeChild(tempInput);
+
+  showCopiedMessage();
+}

@@ -168,6 +168,28 @@ textarea {
   cursor: url("../images/text-cursor-25.png"), auto !important;
 }
 
+.emailId {
+  color: snow;
+  margin-top: 10px;
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  position: relative;
+}
+
+.emailId:hover::after {
+  content: "Click to copy";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-2);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
 ::selection {
   background: var(--orange-yellow-crayola);
   color: var(--smoky-black);
@@ -179,6 +201,7 @@ textarea {
 
 html {
   font-family: var(--ff-poppins);
+  cursor: url("../images/cursor-25.png"), auto !important;
 }
 
 body {
