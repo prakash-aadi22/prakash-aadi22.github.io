@@ -189,29 +189,54 @@ function copyToClipboard() {
   showCopiedMessage();
 }
 
+
 // Get all the audio icon elements
 const audioIcons = document.querySelectorAll(".audioIcon");
 
+// Variable to track the currently playing audio
+let currentlyPlayingAudio = null;
+
 // Add event listeners to each icon
 audioIcons.forEach((icon) => {
-  // Find the corresponding audio player within the same parent container
-  const audioPlayer = icon.parentElement.querySelector(".audioPlayer"); // Use nextElementSibling to directly get the audio element
+  const audioId = icon.closest(".audio-icon").getAttribute("data-audio-id"); // Get the unique audio ID from the closest parent
+  alert(audioId)
+  const audioPlayer = document.querySelector(`audio[data-audio-id="${audioId}"]`);
+  const audioIconImage = icon; // Direct reference to the image element inside the audio icon
 
-  // Proceed only if the audioPlayer element is found
+  // Proceed only if the audioPlayer and audioIconImage elements are found
+  if (!audioPlayer || !audioId) {
+    console.warn(`Audio player not found for audio ID: ${audioId}`);
+    return; // Skip this iteration if elements are not found
+  }
+
   icon.addEventListener("click", () => {
+    // If there is an audio playing and it's not the current one, pause it
+    if (currentlyPlayingAudio && currentlyPlayingAudio !== audioPlayer) {
+      currentlyPlayingAudio.pause();
+    }
+
+    // Play or pause the current audio
     if (audioPlayer.paused) {
       audioPlayer.play();
+      currentlyPlayingAudio = audioPlayer; // Update the currently playing audio
     } else {
       audioPlayer.pause();
+      currentlyPlayingAudio = null; // Clear the currently playing audio
     }
   });
 
   // Change the icon while playing/paused
   audioPlayer.addEventListener("play", () => {
-    icon.src = "./assets/images/equalizer3.gif"; // Change icon when playing
+    audioIconImage.src = "./assets/images/equalizer3.gif"; // Change icon when playing
   });
 
   audioPlayer.addEventListener("pause", () => {
-    icon.src = "./assets/images/icons8-audio-100.png"; // Revert back when paused
+    audioIconImage.src = "./assets/images/icons8-audio-100.png"; // Revert back when paused
+  });
+
+  // Stop tracking if audio ends
+  audioPlayer.addEventListener("ended", () => {
+    currentlyPlayingAudio = null; // Clear the currently playing audio when it ends
+    audioIconImage.src = "./assets/images/icons8-audio-100.png"; // Reset icon when audio ends
   });
 });
