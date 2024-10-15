@@ -189,12 +189,15 @@ function copyToClipboard() {
   showCopiedMessage();
 }
 
-
+// Get all the audio icon elements
 const audioIcons = document.querySelectorAll(".audioIcon");
 
+// Add event listeners to each icon
 audioIcons.forEach((icon) => {
-  const audioPlayer = icon.parentElement.querySelector(".audioPlayer");
+  // Find the corresponding audio player within the same parent container
+  const audioPlayer = icon.parentElement.querySelector(".audioPlayer"); // Use nextElementSibling to directly get the audio element
 
+  // Proceed only if the audioPlayer element is found
   icon.addEventListener("click", () => {
     if (audioPlayer.paused) {
       audioPlayer.play();
@@ -203,11 +206,12 @@ audioIcons.forEach((icon) => {
     }
   });
 
+  // Change the icon while playing/paused
   audioPlayer.addEventListener("play", () => {
-    icon.src = "./assets/images/equalizer3.gif";
+    icon.src = "./assets/images/equalizer3.gif"; // Change icon when playing
   });
 
   audioPlayer.addEventListener("pause", () => {
-    icon.src = "./assets/images/icons8-audio-100.png";
+    icon.src = "./assets/images/icons8-audio-100.png"; // Revert back when paused
   });
 });
