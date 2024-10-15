@@ -205,7 +205,8 @@ audioIcons.forEach((icon) => {
   icon.addEventListener("click", () => {
     // If there is an audio playing and it's not the current one, pause it
     if (currentlyPlayingAudio && currentlyPlayingAudio !== audioPlayer) {
-      currentlyPlayingAudio.pause();
+      currentlyPlayingAudio.currentTime = 0; // Reset to the beginning
+      currentlyPlayingAudio.pause(); // Pause it
     }
 
     // Play or pause the current audio
