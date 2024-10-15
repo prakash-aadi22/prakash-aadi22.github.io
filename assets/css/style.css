@@ -168,6 +168,23 @@ textarea {
   cursor: url("../images/text-cursor-25.png"), auto !important;
 }
 
+.audio-icon {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+}
+
+.audioIcon {
+  height: auto;
+  width: 25px;
+  position: relative;
+  top: -5px;
+}
+
+.title-audio {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .emailId {
   color: snow;
   margin-top: 10px;

@@ -144,7 +144,6 @@ form.addEventListener("submit", (event) => {
   formBtn.disabled = true;
 });
 
-
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
@@ -189,3 +188,26 @@ function copyToClipboard() {
 
   showCopiedMessage();
 }
+
+
+const audioIcons = document.querySelectorAll(".audioIcon");
+
+audioIcons.forEach((icon) => {
+  const audioPlayer = icon.parentElement.querySelector(".audioPlayer");
+
+  icon.addEventListener("click", () => {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  });
+
+  audioPlayer.addEventListener("play", () => {
+    icon.src = "./assets/images/equalizer3.gif";
+  });
+
+  audioPlayer.addEventListener("pause", () => {
+    icon.src = "./assets/images/icons8-audio-100.png";
+  });
+});
