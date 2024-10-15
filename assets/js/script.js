@@ -199,15 +199,8 @@ let currentlyPlayingAudio = null;
 // Add event listeners to each icon
 audioIcons.forEach((icon) => {
   const audioId = icon.closest(".audio-icon").getAttribute("data-audio-id"); // Get the unique audio ID from the closest parent
-  alert(audioId)
   const audioPlayer = document.querySelector(`audio[data-audio-id="${audioId}"]`);
   const audioIconImage = icon; // Direct reference to the image element inside the audio icon
-
-  // Proceed only if the audioPlayer and audioIconImage elements are found
-  if (!audioPlayer || !audioId) {
-    console.warn(`Audio player not found for audio ID: ${audioId}`);
-    return; // Skip this iteration if elements are not found
-  }
 
   icon.addEventListener("click", () => {
     // If there is an audio playing and it's not the current one, pause it
