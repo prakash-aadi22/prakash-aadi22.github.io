@@ -226,13 +226,6 @@ body {
   cursor: url("../images/cursor-25.png"), auto !important;
 }
 
-.info {
-  color: var(--light-gray);
-  margin-top: 10px;
-  margin-left: 15px;
-  font-size: 80%;
-}
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
