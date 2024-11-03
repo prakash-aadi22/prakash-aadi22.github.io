@@ -234,3 +234,46 @@ audioIcons.forEach((icon) => {
     audioIconImage.src = "./assets/images/icons8-audio-100.png"; // Reset icon when audio ends
   });
 });
+
+// Get all navbar links
+const navbarLinks = document.querySelectorAll(".navbar-link");
+
+// Add click event listener to each navbar link
+navbarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    // If there is currently playing audio, stop and reset it
+    if (currentlyPlayingAudio) {
+      currentlyPlayingAudio.pause();
+      currentlyPlayingAudio.currentTime = 0;
+      
+      // Reset the icon to default
+      const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
+      if (audioIconImage) {
+        audioIconImage.src = "./assets/images/icons8-audio-100.png";
+      }
+      
+      // Clear the currently playing audio
+      currentlyPlayingAudio = null;
+    }
+  });
+});
+
+const testimonials = document.querySelectorAll(".testimonials-item");
+testimonials.forEach((link) => {
+  link.addEventListener("click", () => {
+    // If there is currently playing audio, stop and reset it
+    if (currentlyPlayingAudio) {
+      currentlyPlayingAudio.pause();
+      currentlyPlayingAudio.currentTime = 0;
+      
+      // Reset the icon to default
+      const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
+      if (audioIconImage) {
+        audioIconImage.src = "./assets/images/icons8-audio-100.png";
+      }
+      
+      // Clear the currently playing audio
+      currentlyPlayingAudio = null;
+    }
+  });
+});
