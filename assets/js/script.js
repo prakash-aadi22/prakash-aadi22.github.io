@@ -293,8 +293,8 @@ navigationLinks.forEach(link => {
   });
 });
 
-// language selection
-let currentLanguage = 'english'; // Default language
+// Default to 'english' if no language is stored in localStorage
+let currentLanguage = localStorage.getItem('currentLanguage') || 'english';
 
 // Function to load language data
 function loadLanguage(language) {
@@ -331,12 +331,13 @@ function getActivePageFromNav() {
 // Event listener for language switcher dropdown
 document.getElementById('languageSwitcher').addEventListener('change', (event) => {
   currentLanguage = event.target.value; // Update the current language
+  localStorage.setItem('currentLanguage', currentLanguage); // Save the selected language to localStorage
   loadLanguage(currentLanguage); // Load and apply the new language
 });
 
 // Load the default language and active page on page load
 document.addEventListener('DOMContentLoaded', () => {
-  loadLanguage(currentLanguage);
+  loadLanguage(currentLanguage); // Load the language from localStorage or default
   showActivePage(getActivePageFromNav()); // Show the active page
 });
 
@@ -357,7 +358,7 @@ languageSwitcher.addEventListener('change', function () {
 
 // Close the dropdown when clicking anywhere else on the screen
 document.addEventListener('click', function (event) {
-  if (!languageSwitcherDiv.contains(event.target)) { 
+  if (!languageSwitcherDiv.contains(event.target)) {
     languageSwitcherDiv.classList.remove('active');
   }
 });
