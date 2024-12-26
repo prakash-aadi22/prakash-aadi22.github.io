@@ -17,38 +17,26 @@
 
   /* gradient */
 
-  --bg-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(240, 1%, 25%) 3%,
-    hsl(0, 0%, 19%) 97%
-  );
-  --bg-gradient-jet: linear-gradient(
-      to bottom right,
+  --bg-gradient-onyx: linear-gradient(to bottom right,
+      hsl(240, 1%, 25%) 3%,
+      hsl(0, 0%, 19%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right,
       hsla(240, 1%, 18%, 0.251) 0%,
-      hsla(240, 2%, 11%, 0) 100%
-    ),
+      hsla(240, 2%, 11%, 0) 100%),
     hsl(240, 2%, 13%);
-  --bg-gradient-yellow-1: linear-gradient(
-    to bottom right,
-    hsl(45, 100%, 71%) 0%,
-    hsla(36, 100%, 69%, 0) 50%
-  );
-  --bg-gradient-yellow-2: linear-gradient(
-      135deg,
+  --bg-gradient-yellow-1: linear-gradient(to bottom right,
+      hsl(45, 100%, 71%) 0%,
+      hsla(36, 100%, 69%, 0) 50%);
+  --bg-gradient-yellow-2: linear-gradient(135deg,
       hsla(45, 100%, 71%, 0.251) 0%,
-      hsla(35, 100%, 68%, 0) 59.86%
-    ),
+      hsla(35, 100%, 68%, 0) 59.86%),
     hsl(240, 2%, 13%);
-  --border-gradient-onyx: linear-gradient(
-    to bottom right,
-    hsl(0, 0%, 25%) 0%,
-    hsla(0, 0%, 25%, 0) 50%
-  );
-  --text-gradient-yellow: linear-gradient(
-    to right,
-    hsl(45, 100%, 72%),
-    hsl(35, 100%, 68%)
-  );
+  --border-gradient-onyx: linear-gradient(to bottom right,
+      hsl(0, 0%, 25%) 0%,
+      hsla(0, 0%, 25%, 0) 50%);
+  --text-gradient-yellow: linear-gradient(to right,
+      hsl(45, 100%, 72%),
+      hsl(35, 100%, 68%));
 
   /* solid */
 
@@ -573,6 +561,49 @@ main {
   color: var(--orange-yellow-crayola);
 }
 
+/* Language Switcher Styles */
+
+.language-switcher {
+  position: relative;
+}
+
+.language-icon {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+.language-icon:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid var(--orange-yellow-crayola);
+  border-radius: 5px;
+  padding: 5px;
+  width: auto;
+}
+
+.language-switcher.active .language-dropdown {
+  display: block;
+}
+
+/* .language-dropdown option {
+  padding: 5px;
+  font-size: 16px;
+  color: #00ff0d;
+  background-color: #1e00ff;
+  border: none;
+  cursor: pointer;
+}
+
+.language-dropdown option:hover {
+  background-color: #fc0000;
+} */
+
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
@@ -810,7 +841,7 @@ main {
   box-shadow: var(--shadow-2);
 }
 
-.modal-img-wrapper > img {
+.modal-img-wrapper>img {
   display: none;
 }
 
@@ -1038,7 +1069,7 @@ main {
   transition: 0.15s ease-in-out;
 }
 
-.filter-select.active + .select-list {
+.filter-select.active+.select-list {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
@@ -1085,7 +1116,7 @@ main {
   }
 }
 
-.project-item > a {
+.project-item>a {
   width: 100%;
 }
 
@@ -1110,7 +1141,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before {
+.project-item>a:hover .project-img::before {
   background: hsla(0, 0%, 0%, 0.5);
 }
 
@@ -1131,7 +1162,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-item-icon-box {
+.project-item>a:hover .project-item-icon-box {
   --scale: 1;
   opacity: 1;
 }
@@ -1147,7 +1178,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover img {
+.project-item>a:hover img {
   transform: scale(1.1);
 }
 
@@ -1185,7 +1216,7 @@ main {
   gap: 20px;
 }
 
-.project-post-item > a {
+.project-post-item>a {
   position: relative;
   background: var(--border-gradient-onyx);
   height: 100%;
@@ -1194,7 +1225,7 @@ main {
   z-index: 1;
 }
 
-.project-post-item > a::before {
+.project-post-item>a::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -1217,7 +1248,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-post-item > a:hover .project-banner-box img {
+.project-post-item>a:hover .project-banner-box img {
   transform: scale(1.1);
 }
 
@@ -1259,7 +1290,7 @@ main {
   transition: var(--transition-1);
 }
 
-.project-post-item > a:hover .project-item-title {
+.project-post-item>a:hover .project-item-title {
   color: var(--orange-yellow-crayola);
 }
 
@@ -1660,7 +1691,7 @@ textarea.form-input::-webkit-resizer {
     width: 65px;
   }
 
-  .modal-img-wrapper > img {
+  .modal-img-wrapper>img {
     display: block;
     flex-grow: 1;
     width: 35px;

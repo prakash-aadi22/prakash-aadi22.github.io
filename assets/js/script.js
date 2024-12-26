@@ -144,26 +144,6 @@ form.addEventListener("submit", (event) => {
   formBtn.disabled = true;
 });
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-  });
-}
-
 // Function to show the copied message
 const showCopiedMessage = () => {
   const successMessage = document.createElement("div");
@@ -245,13 +225,13 @@ navbarLinks.forEach((link) => {
     if (currentlyPlayingAudio) {
       currentlyPlayingAudio.pause();
       currentlyPlayingAudio.currentTime = 0;
-      
+
       // Reset the icon to default
       const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
       if (audioIconImage) {
         audioIconImage.src = "./assets/images/icons8-audio-100.png";
       }
-      
+
       // Clear the currently playing audio
       currentlyPlayingAudio = null;
     }
@@ -265,15 +245,119 @@ testimonials.forEach((link) => {
     if (currentlyPlayingAudio) {
       currentlyPlayingAudio.pause();
       currentlyPlayingAudio.currentTime = 0;
-      
+
       // Reset the icon to default
       const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
       if (audioIconImage) {
         audioIconImage.src = "./assets/images/icons8-audio-100.png";
       }
-      
+
       // Clear the currently playing audio
       currentlyPlayingAudio = null;
     }
   });
+});
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// Function to show the active page
+function showActivePage(targetPage) {
+  // Loop through pages and set active
+  pages.forEach(page => {
+    if (page.dataset.page === targetPage) {
+      page.classList.add("active");
+    } else {
+      page.classList.remove("active");
+    }
+  });
+
+  // Loop through nav links and set active
+  navigationLinks.forEach(link => {
+    if (link.getAttribute('data-nav-link') === targetPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+
+  window.scrollTo(0, 0); // Scroll to the top of the page
+}
+
+// Add event to all nav links
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    const targetPage = this.getAttribute('data-nav-link');
+    showActivePage(targetPage);
+  });
+});
+
+// language selection
+let currentLanguage = 'english'; // Default language
+
+// Function to load language data
+function loadLanguage(language) {
+  const url = `assets/languages/${language}.json`;
+
+  fetch(url)
+    .then(response => {
+      // if (!response.ok) {
+      //   throw new Error(`HTTP error! status: ${response.status}`);
+      // }
+      return response.json();
+    })
+    .then(data => {
+      applyTranslations(data);
+      showActivePage(getActivePageFromNav()); // Show the active page after language change
+    })
+    .catch(error => console.error('Error loading language file!'));
+}
+
+// Function to apply translations
+function applyTranslations(translations) {
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    element.textContent = translations[key] || key; // Update text content
+  });
+}
+
+// Function to get the currently active page from the nav
+function getActivePageFromNav() {
+  const activeLink = document.querySelector('.navbar-link.active');
+  return activeLink ? activeLink.getAttribute('data-nav-link') : 'about'; // Default to 'about' if no active link
+}
+
+// Event listener for language switcher dropdown
+document.getElementById('languageSwitcher').addEventListener('change', (event) => {
+  currentLanguage = event.target.value; // Update the current language
+  loadLanguage(currentLanguage); // Load and apply the new language
+});
+
+// Load the default language and active page on page load
+document.addEventListener('DOMContentLoaded', () => {
+  loadLanguage(currentLanguage);
+  showActivePage(getActivePageFromNav()); // Show the active page
+});
+
+// Language dropdown switcher logic 
+const languageSwitcher = document.getElementById('languageSwitcher');
+const languageSwitcherDiv = document.querySelector('.language-switcher');
+
+// Toggle the visibility of the dropdown when the icon is clicked
+document.querySelector('.language-icon').addEventListener('click', function (event) {
+  event.stopPropagation(); // Prevent the click from propagating to the document
+  languageSwitcherDiv.classList.toggle('active');
+});
+
+// Close the dropdown when a language is selected
+languageSwitcher.addEventListener('change', function () {
+  languageSwitcherDiv.classList.remove('active');
+});
+
+// Close the dropdown when clicking anywhere else on the screen
+document.addEventListener('click', function (event) {
+  if (!languageSwitcherDiv.contains(event.target)) { 
+    languageSwitcherDiv.classList.remove('active');
+  }
 });
