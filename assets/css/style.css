@@ -178,6 +178,7 @@ textarea {
   margin-top: 10px;
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   position: relative;
+  margin-bottom: 25px;
 }
 
 .emailId:hover::after {
