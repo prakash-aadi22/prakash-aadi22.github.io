@@ -563,6 +563,10 @@ main {
 
 /* Language Switcher Styles */
 
+.language-switcher-nav-bar {
+  display: none;
+}
+
 .language-switcher {
   position: relative;
 }
@@ -1431,6 +1435,43 @@ textarea.form-input::-webkit-resizer {
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
+
+@media (max-width: 1024px) {
+  /* CSS rules for screens smaller than 1000px */
+
+  .language-switcher {
+    display: none;
+  }
+
+  .language-switcher-nav-bar {
+    display: block;
+  }
+
+  .language-icon-nav-bar {
+    cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+
+  .language-icon-nav-bar:hover {
+    color: var(--orange-yellow-crayola);
+  }
+
+  .language-dropdown-nav-bar {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid var(--orange-yellow-crayola);
+    border-radius: 5px;
+    padding: 5px;
+    width: auto;
+  }
+
+  .language-switcher-nav-bar.active .language-dropdown-nav-bar {
+    display: block;
+  }
+}
+
 
 /**
  * responsive larger than 450px screen
