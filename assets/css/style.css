@@ -1219,7 +1219,8 @@ main {
 
 .project-title,
 .project-category {
-  margin-left: 10px;
+  /* margin-left: 10px; */
+  text-align: center;
 }
 
 .project-title {
