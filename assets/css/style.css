@@ -10,6 +10,33 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
+
+/* "zoom-in" transition effect when hovering over */
+
+img:hover:not(.avatar-box img),
+.navbar-item:hover,
+.contact-link:hover,
+.emailId:hover {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar-box:hover {
+  transform: scale(1.2) scaleX(-1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonials-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 :root {
   /**
    * colors
@@ -165,6 +192,13 @@ textarea {
   width: 25px;
   position: relative;
   top: -5px;
+}
+
+.skill-icons {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  margin-right: 10px;
+  margin-left: 5px;
+  width: 48px;
 }
 
 .title-audio {
