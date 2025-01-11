@@ -139,6 +139,21 @@ const showSuccessMessage = () => {
 // Add submit event to the form
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  // Collect form data
+  const formData = new FormData(form);
+  const fullName = formData.get("fullName");
+  const email = formData.get("email");
+  const message = formData.get("message");
+
+  // Construct mailto link
+  const subject = `New message from ${fullName}`;
+  const body = `Full Name: ${fullName}\nEmail: ${email}\nMessage: ${message}`;
+  const mailtoLink = `mailto:aditya.ap2209@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Redirect to mailto link
+  window.location.href = mailtoLink;
+
   showSuccessMessage();
   form.reset();
   formBtn.disabled = true;
@@ -317,8 +332,19 @@ function loadLanguage(language) {
 // Function to apply translations
 function applyTranslations(translations) {
   document.querySelectorAll('[data-translate]').forEach(element => {
-    const key = element.getAttribute('data-translate');
-    element.textContent = translations[key] || key; // Update text content
+    let key = element.getAttribute('data-translate');
+    // element.textContent = translations[key] || key; // Update text content
+    // Handle placeholders for input and textarea
+    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+      if (translations[key]) {
+        element.setAttribute('placeholder', translations[key]);
+      }
+    } else {
+      // Update text content for other elements
+      if (translations[key]) {
+        element.textContent = translations[key];
+      }
+    }
   });
 }
 
