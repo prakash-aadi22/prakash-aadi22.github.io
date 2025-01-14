@@ -155,7 +155,7 @@
     "You can play basic web games.": "يمكنك لعب ألعاب ويب أساسية.",
     "Linktree": "لينكتري",
     "Linkedin": "لينكدإن",
-    "Github": "جيت هاب",
+    "GitHub": "جيت هاب",
     "Instagram": "إنستغرام",
     "Facebook": "فيسبوك",
     "LeetCode": "ليت كود",
@@ -178,5 +178,6 @@
     "100%": "100%",
     "Full name": "الاسم الكامل",
     "Email address": "عنوان البريد الإلكتروني",
-    "Your Message": "رسالتك"
+    "Your Message": "رسالتك",
+    "Bootstrap": "بوتستراب"
 }

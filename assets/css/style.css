@@ -1047,7 +1047,8 @@ main {
 
 .skill-progress-bg {
   background: var(--jet);
-  width: 100%;
+  margin-left: auto;
+  width: 91.5%;
   height: 8px;
   border-radius: 10px;
 }

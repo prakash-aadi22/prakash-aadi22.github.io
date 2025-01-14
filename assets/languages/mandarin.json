@@ -155,7 +155,7 @@
     "You can play basic web games.": "您可以玩一些基础网页游戏。",
     "Linktree": "链接树",
     "Linkedin": "领英",
-    "Github": "Github",
+    "GitHub": "GitHub",
     "Instagram": "Instagram",
     "Facebook": "Facebook",
     "LeetCode": "LeetCode",
@@ -178,5 +178,6 @@
     "100%": "100%",
     "Full name": "全名",
     "Email address": "电子邮件地址",
-    "Your Message": "您的信息"
+    "Your Message": "您的信息",
+    "Bootstrap": "引导程序"
 }

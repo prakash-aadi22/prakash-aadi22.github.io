@@ -155,7 +155,7 @@
     "You can play basic web games.": "మీరు మూల్యమైన వెబ్ ఆటలను ఆడవచ్చు.",
     "Linktree": "Linktree",
     "Linkedin": "Linkedin",
-    "Github": "Github",
+    "GitHub": "GitHub",
     "Instagram": "Instagram",
     "Facebook": "Facebook",
     "LeetCode": "LeetCode",
@@ -178,5 +178,6 @@
     "100%": "100%",
     "Full name": "పూర్తి పేరు",
     "Email address": "ఈమెయిల్ చిరునామా",
-    "Your Message": "మీ సందేశం"
+    "Your Message": "మీ సందేశం",
+    "Bootstrap": "బూట్‌స్ట్రాప్"
 }

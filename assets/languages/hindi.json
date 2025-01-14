@@ -155,7 +155,7 @@
     "You can play basic web games.": "आप मूल वेब खेल खेल सकते हैं।",
     "Linktree": "लिंकट्री",
     "Linkedin": "लिंक्डइन",
-    "Github": "गिटहब",
+    "GitHub": "गिटहब",
     "Instagram": "इंस्टाग्राम",
     "Facebook": "फ़ेसबुक",
     "LeetCode": "लीटकोड",
@@ -188,5 +188,6 @@
     "100%": "१००%",
     "Full name": "पूरा नाम",
     "Email address": "ईमेल पता",
-    "Your Message": "आपका संदेश"
+    "Your Message": "आपका संदेश",
+    "Bootstrap": "बूटस्ट्रैप"
 }

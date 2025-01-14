@@ -155,7 +155,7 @@
     "You can play basic web games.": "Вы можете играть в простые веб-игры.",
     "Linktree": "Linktree",
     "Linkedin": "Linkedin",
-    "Github": "Github",
+    "GitHub": "GitHub",
     "Instagram": "Instagram",
     "Facebook": "Facebook",
     "LeetCode": "LeetCode",
@@ -178,5 +178,6 @@
     "100%": "100%",
     "Full name": "Полное имя",
     "Email address": "Адрес электронной почты",
-    "Your Message": "Ваше сообщение"
+    "Your Message": "Ваше сообщение",
+    "Bootstrap": "Бутстрап"
 }
