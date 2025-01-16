@@ -212,7 +212,7 @@ textarea {
   margin-top: 10px;
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .emailId:hover::after {
@@ -220,7 +220,7 @@ textarea {
   position: absolute;
   bottom: -25px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(30%);
   color: var(--orange-yellow-crayola);
   background: var(--bg-gradient-yellow-2);
   padding: 5px;
@@ -608,8 +608,19 @@ main {
   color: #ffffff;
 }
 
-.language-icon:hover {
+.language-icon:hover::after {
+  content: "Change Language";
+  position: absolute;
+  bottom: -25px;
+  left: 10%;
+  transform: translateX(-50%);
   color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-2);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .language-dropdown {
