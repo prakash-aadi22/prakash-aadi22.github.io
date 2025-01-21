@@ -370,6 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Language dropdown switcher logic 
 const languageSwitcher = document.getElementById('languageSwitcher');
 const languageSwitcherDiv = document.querySelector('.language-switcher');
+const languageIcon = document.querySelector(".language-icon");
 
 // Toggle the visibility of the dropdown when the icon is clicked
 document.querySelector('.language-icon').addEventListener('click', function (event) {
@@ -387,4 +388,14 @@ document.addEventListener('click', function (event) {
   if (!languageSwitcherDiv.contains(event.target)) {
     languageSwitcherDiv.classList.remove('active');
   }
+});
+
+// Add 'dropdown-open' class when dropdown is focused
+languageSwitcher.addEventListener("focus", () => {
+  languageIcon.classList.add("dropdown-open");
+});
+
+// Remove 'dropdown-open' class when dropdown loses focus
+languageSwitcher.addEventListener("blur", () => {
+  languageIcon.classList.remove("dropdown-open");
 });

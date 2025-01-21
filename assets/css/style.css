@@ -600,6 +600,9 @@ main {
 
 .language-switcher {
   position: relative;
+  margin-top: 5px;
+  margin-left: 90px;
+  width: min-content;
 }
 
 .language-icon {
@@ -623,14 +626,20 @@ main {
   z-index: 1;
 }
 
+.language-icon.dropdown-open:hover::after {
+  content: none;
+}
+
 .language-dropdown {
   display: none;
   position: absolute;
-  background-color: white;
-  border: 1px solid var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-2);
   border-radius: 5px;
   padding: 5px;
   width: auto;
+  border: 1px inset var(--vegas-gold);
+  outline: none;
 }
 
 .language-switcher.active .language-dropdown {
