@@ -631,6 +631,7 @@ main {
 }
 
 .language-dropdown {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   display: none;
   position: absolute;
   color: var(--orange-yellow-crayola);

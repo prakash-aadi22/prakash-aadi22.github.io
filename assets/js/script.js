@@ -399,3 +399,76 @@ languageSwitcher.addEventListener("focus", () => {
 languageSwitcher.addEventListener("blur", () => {
   languageIcon.classList.remove("dropdown-open");
 });
+
+function changeTheme() {
+  const root = document.documentElement;
+  const themeToggle = document.querySelector('.theme-link');
+  const iconBox = document.querySelector('.theme-box ion-icon');
+
+  // Check the current theme
+  const isDarkTheme = localStorage.getItem('theme') === 'dark';
+
+  if (isDarkTheme) {
+    // Switch to light theme
+    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 98%)'); // Light background
+    root.style.setProperty('--onyx', 'hsl(0, 0%, 84%)');
+    root.style.setProperty('--eerie-black-1', 'hsl(0, 0%, 90%)');
+    root.style.setProperty('--eerie-black-2', 'hsl(0, 0%, 85%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 10%)');
+
+    themeToggle.setAttribute('data-translate', 'Light');
+    themeToggle.textContent = 'Light';
+    iconBox.setAttribute('name', 'sunny-outline');
+
+    // Save the theme in localStorage
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Switch to dark theme
+    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)'); // Dark background
+    root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
+    root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
+    root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 98%)');
+
+    themeToggle.setAttribute('data-translate', 'Dark');
+    themeToggle.textContent = 'Dark';
+    iconBox.setAttribute('name', 'moon-outline');
+
+    // Save the theme in localStorage
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+  const themeToggle = document.querySelector('.theme-link');
+  const iconBox = document.querySelector('.theme-box ion-icon');
+  let savedTheme = localStorage.getItem('theme') || 'dark';  
+
+  if (savedTheme === 'light') {
+    // Apply light theme
+    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 98%)'); // Light background
+    root.style.setProperty('--onyx', 'hsl(0, 0%, 84%)');
+    root.style.setProperty('--eerie-black-1', 'hsl(0, 0%, 90%)');
+    root.style.setProperty('--eerie-black-2', 'hsl(0, 0%, 85%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 10%)');
+
+    themeToggle.setAttribute('data-translate', 'Light');
+    themeToggle.textContent = 'Light';
+    iconBox.setAttribute('name', 'sunny-outline');
+  } else {
+    // Set theme to localStorage
+    localStorage.setItem('theme', 'dark');
+
+    // Apply dark theme
+    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)'); // Dark background
+    root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
+    root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
+    root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
+    root.style.setProperty('--text-color', 'hsl(0, 0%, 98%)');
+
+    themeToggle.setAttribute('data-translate', 'Dark');
+    themeToggle.textContent = 'Dark';
+    iconBox.setAttribute('name', 'moon-outline');
+  }
+});
