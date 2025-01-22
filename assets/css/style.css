@@ -10,33 +10,6 @@
   #CUSTOM PROPERTY
 \*-----------------------------------*/
 
-
-/* "zoom-in" transition effect when hovering over */
-
-img:hover:not(.avatar-box img),
-.navbar-item:hover,
-.contact-link:hover,
-.emailId:hover {
-  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-ion-icon:hover {
-  transform: scale(1.2);
-  transition: transform 0.3s ease-in-out;
-}
-
-.avatar-box:hover {
-  transform: scale(1.2) scaleX(-1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.testimonials-item:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
 :root {
   /**
    * colors
@@ -113,6 +86,8 @@ ion-icon:hover {
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
+  --white-shadow-1: -4px 8px 24px hsla(0, 0%, 100%, 0.25);
+
   /**
    * transition
    */
@@ -124,6 +99,46 @@ ion-icon:hover {
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
+
+html {
+  font-family: var(--ff-poppins);
+  cursor: url("../images/cursor-25.png"), auto !important;
+}
+
+body {
+  background: var(--smoky-black);
+  cursor: url("../images/cursor-25.png"), auto !important;
+}
+
+/* body.light-theme {
+  background: var(--white-1);
+} */
+
+/* "zoom-in" transition effect when hovering over */
+
+img:hover:not(.avatar-box img),
+.navbar-item:hover,
+.contact-link:hover,
+.emailId:hover {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.avatar-box:hover {
+  transform: scale(1.2) scaleX(-1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonials-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
 
 *,
 *::before,
@@ -239,16 +254,6 @@ textarea {
   outline-color: var(--orange-yellow-crayola);
 }
 
-html {
-  font-family: var(--ff-poppins);
-  cursor: url("../images/cursor-25.png"), auto !important;
-}
-
-body {
-  background: var(--smoky-black);
-  cursor: url("../images/cursor-25.png"), auto !important;
-}
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -262,6 +267,11 @@ article {
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
+
+/* body.light-theme .sidebar,
+body.light-theme article {
+  background: var(--white-2);
+} */
 
 .separator {
   width: 100%;

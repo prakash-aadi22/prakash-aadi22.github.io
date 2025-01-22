@@ -405,7 +405,7 @@ languageSwitcher.addEventListener("blur", () => {
 });
 
 function changeTheme() {
-  const root = document.documentElement;
+  const body = document.body;
   const themeToggle = document.querySelector('.theme-link');
   const iconBox = document.querySelector('.theme-box ion-icon');
 
@@ -414,11 +414,8 @@ function changeTheme() {
 
   if (isDarkTheme) {
     // Switch to light theme
-    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 98%)'); // Light background
-    root.style.setProperty('--onyx', 'hsl(0, 0%, 84%)');
-    root.style.setProperty('--eerie-black-1', 'hsl(0, 0%, 90%)');
-    root.style.setProperty('--eerie-black-2', 'hsl(0, 0%, 85%)');
-    root.style.setProperty('--text-color', 'hsl(0, 0%, 10%)');
+    body.classList.remove('dark-theme');
+    body.classList.add('light-theme');
 
     themeToggle.setAttribute('data-translate', 'Light');
     themeToggle.textContent = 'Light';
@@ -428,11 +425,8 @@ function changeTheme() {
     localStorage.setItem('theme', 'light');
   } else {
     // Switch to dark theme
-    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)'); // Dark background
-    root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
-    root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
-    root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
-    root.style.setProperty('--text-color', 'hsl(0, 0%, 98%)');
+    body.classList.remove('light-theme');
+    body.classList.add('dark-theme');
 
     themeToggle.setAttribute('data-translate', 'Dark');
     themeToggle.textContent = 'Dark';
@@ -444,18 +438,13 @@ function changeTheme() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.documentElement;
   const themeToggle = document.querySelector('.theme-link');
   const iconBox = document.querySelector('.theme-box ion-icon');
   let savedTheme = localStorage.getItem('theme') || 'dark';
 
   if (savedTheme === 'light') {
     // Apply light theme
-    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 98%)'); // Light background
-    root.style.setProperty('--onyx', 'hsl(0, 0%, 84%)');
-    root.style.setProperty('--eerie-black-1', 'hsl(0, 0%, 90%)');
-    root.style.setProperty('--eerie-black-2', 'hsl(0, 0%, 85%)');
-    root.style.setProperty('--text-color', 'hsl(0, 0%, 10%)');
+    body.classList.add('light-theme');
 
     themeToggle.setAttribute('data-translate', 'Light');
     themeToggle.textContent = 'Light';
@@ -465,11 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', 'dark');
 
     // Apply dark theme
-    root.style.setProperty('--smoky-black', 'hsl(0, 0%, 7%)'); // Dark background
-    root.style.setProperty('--onyx', 'hsl(240, 1%, 17%)');
-    root.style.setProperty('--eerie-black-1', 'hsl(240, 2%, 13%)');
-    root.style.setProperty('--eerie-black-2', 'hsl(240, 2%, 12%)');
-    root.style.setProperty('--text-color', 'hsl(0, 0%, 98%)');
+    body.classList.add('dark-theme');
 
     themeToggle.setAttribute('data-translate', 'Dark');
     themeToggle.textContent = 'Dark';
