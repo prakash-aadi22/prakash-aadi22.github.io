@@ -443,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const themeToggle = document.querySelector('.theme-link');
   const iconBox = document.querySelector('.theme-box ion-icon');
-  let savedTheme = localStorage.getItem('theme') || 'dark';  
+  let savedTheme = localStorage.getItem('theme') || 'dark'; 
 
   if (savedTheme === 'light') {
     // Apply light theme
