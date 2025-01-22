@@ -363,6 +363,10 @@ document.getElementById('languageSwitcher').addEventListener('change', (event) =
 
 // Load the default language and active page on page load
 document.addEventListener('DOMContentLoaded', () => {
+  // Set the dropdown to the stored language or default
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  languageSwitcher.value = currentLanguage; // Sync the dropdown with localStorage
+
   loadLanguage(currentLanguage); // Load the language from localStorage or default
   showActivePage(getActivePageFromNav()); // Show the active page
 });
@@ -443,7 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const themeToggle = document.querySelector('.theme-link');
   const iconBox = document.querySelector('.theme-box ion-icon');
-  let savedTheme = localStorage.getItem('theme') || 'dark'; 
+  let savedTheme = localStorage.getItem('theme') || 'dark';
 
   if (savedTheme === 'light') {
     // Apply light theme
