@@ -259,7 +259,7 @@ textarea {
   display: inline-block;
   white-space: wrap;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: bolder;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -267,7 +267,8 @@ textarea {
 
 .typing {
   display: inline-block;
-  font-weight: bold;
+  font-weight: bolder;
+  color: var(--orange-yellow-crayola);
 }
 
 .cursor {
