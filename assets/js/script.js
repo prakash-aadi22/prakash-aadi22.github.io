@@ -412,6 +412,7 @@ languageSwitcher.addEventListener("blur", () => {
   languageIcon.classList.remove("dropdown-open");
 });
 
+// Theme
 function changeTheme() {
   const body = document.body;
   const themeToggle = document.querySelector('.theme-link');
@@ -446,6 +447,7 @@ function changeTheme() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
   const themeToggle = document.querySelector('.theme-link');
   const iconBox = document.querySelector('.theme-box ion-icon');
   let savedTheme = localStorage.getItem('theme') || 'dark';
@@ -472,6 +474,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Typing Effect
 function getArticle(word) {
+  if (typeof word !== 'string' || word.length === 0) {
+    return ''; // Return an empty string or default article if word is not valid
+  }
+
   const firstLetter = word[0].toLowerCase();
   return ['a', 'e', 'i', 'o', 'u'].includes(firstLetter) ? 'an' : 'a';
 }

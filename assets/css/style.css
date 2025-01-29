@@ -110,9 +110,10 @@ body {
   cursor: url("../images/cursor-25.png"), auto !important;
 }
 
-/* body.light-theme {
+/* light theme */
+body.light-theme {
   background: var(--white-1);
-} */
+}
 
 /* "zoom-in" transition effect when hovering over */
 
@@ -297,10 +298,11 @@ article {
   z-index: 1;
 }
 
-/* body.light-theme .sidebar,
+/* light theme */
+body.light-theme .sidebar,
 body.light-theme article {
   background: var(--white-2);
-} */
+}
 
 .separator {
   width: 100%;
