@@ -530,4 +530,4 @@ function resetTypingEffect() {
   }
 }
 
-typeEffect();
+// typeEffect();
