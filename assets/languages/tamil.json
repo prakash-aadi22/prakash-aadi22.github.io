@@ -180,5 +180,14 @@
     "Email address": "மின்னஞ்சல் முகவரி",
     "Your Message": "உங்கள் செய்தி",
     "Bootstrap": "பூட்ஸ்ட்ராப்",
-    "DaVinci Resolve": "டாவின்சி ரெசோல்வ்"
+    "DaVinci Resolve": "டாவின்சி ரெசோல்வ்",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "நான் ஒரு <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "இருப்பவர், எனக்கு வலிமையான பொறியியல் பின்னணி மற்றும் வெற்றிகரமான சாதனைகள் உள்ளன அணிசார்ந்த வெற்றியை இயக்குவது. தீவிரமான பகுப்பாய்வு திறன்கள், விவரங்களுக்கான விரிவான கவனம் மற்றும் விளங்கமான தொடர்புகளுக்கு அறியப்பட்டவர்.",
+    "texts": [
+        "அனுபவமுள்ள புல் ஸ்டாக் டெவலப்பர்",
+        "உற்சாகமுள்ள கோடர்",
+        "தொழில்நுட்ப ஆர்வலர்",
+        "ரசனையான பிரச்சினை தீர்ப்பவர்",
+        "சாப்ட்வேர் கலைஞர்"
+    ]
 }

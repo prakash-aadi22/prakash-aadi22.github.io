@@ -310,6 +310,7 @@ navigationLinks.forEach(link => {
 
 // Default to 'english' if no language is stored in localStorage
 let currentLanguage = localStorage.getItem('currentLanguage') || 'english';
+let texts = [];
 
 // Function to load language data
 function loadLanguage(language) {
@@ -333,7 +334,10 @@ function loadLanguage(language) {
 function applyTranslations(translations) {
   document.querySelectorAll('[data-translate]').forEach(element => {
     let key = element.getAttribute('data-translate');
-    // element.textContent = translations[key] || key; // Update text content
+
+    // Update the texts array with new language data
+    texts = translations.texts; // Fetch texts for the current language
+
     // Handle placeholders for input and textarea
     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
       if (translations[key]) {
@@ -343,9 +347,13 @@ function applyTranslations(translations) {
       // Update text content for other elements
       if (translations[key]) {
         element.textContent = translations[key];
+        element.innerHTML = translations[key]; // Update the content, allowing HTML elements like <span>
       }
     }
   });
+
+  resetTypingEffect();
+  typeEffect();
 }
 
 // Function to get the currently active page from the nav
@@ -461,3 +469,59 @@ document.addEventListener('DOMContentLoaded', () => {
     iconBox.setAttribute('name', 'moon-outline');
   }
 });
+
+// Typing Effect
+function getArticle(word) {
+  const firstLetter = word[0].toLowerCase();
+  return ['a', 'e', 'i', 'o', 'u'].includes(firstLetter) ? 'an' : 'a';
+}
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingTimeout;
+
+function typeEffect() {
+  const typingElement = document.querySelector("#typing-text");
+  let currentText = texts[textIndex];
+
+  if (currentLanguage == "english") {
+    const article = getArticle(currentText);  // Get the correct article (a/an)
+    // Assuming you're inserting the article dynamically as well
+    currentText = `${article} ${currentText}`;
+  }
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  typingElement.innerHTML = currentText.substring(0, charIndex);
+
+  let typingSpeed = isDeleting ? 50 : 100; // Typing speed
+
+  if (!isDeleting && charIndex === currentText.length) {
+    typingSpeed = 1500; // Pause before deleting
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    textIndex = (textIndex + 1) % texts.length;
+  }
+
+  typingTimeout = setTimeout(typeEffect, typingSpeed); // Store the timeout ID
+}
+
+// Reset typing effect state
+function resetTypingEffect() {
+  clearTimeout(typingTimeout); // Clear the previous timeout
+  textIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+  const typingElement = document.querySelector("#typing-text");
+  if (typingElement) {
+    typingElement.innerHTML = ''; // Clear the current text
+  }
+}
+
+typeEffect();

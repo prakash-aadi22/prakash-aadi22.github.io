@@ -180,5 +180,14 @@
     "Email address": "ईमेल पता",
     "Your Message": "तुम्हारा संदेश",
     "Bootstrap": "बूटस्ट्रैप",
-    "DaVinci Resolve": "डाविंचि रिज़ॉल्व"
+    "DaVinci Resolve": "डाविंचि रिज़ॉल्व",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "अहम् एकः <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "दृढं अभियान्त्रिकी पृष्ठभूमिं च दृढं परिणामपद्धतिं समृद्धः टीमसंपन्नतायाः प्रेरणां कुर्वन्। तीव्रविवेचनात्मककौशलाणि, सूक्ष्मदृष्टिसंयोगं च प्रभावी संवादं च प्रसिद्धः।",
+    "texts": [
+        "अनुभवी पूर्ण-स्ताक् विकसक",
+        "उत्साही कोडकर्ता",
+        "प्रौद्योगिकी प्रेमी",
+        "रचनात्मक समस्यासमाधानकर्ता",
+        "सॉफ़्टवेयर कारीगर"
+    ]
 }

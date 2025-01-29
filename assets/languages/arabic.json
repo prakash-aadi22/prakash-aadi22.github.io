@@ -180,5 +180,14 @@
     "Email address": "عنوان البريد الإلكتروني",
     "Your Message": "رسالتك",
     "Bootstrap": "بوتستراب",
-    "DaVinci Resolve": "دافنشي ريزولف"
+    "DaVinci Resolve": "دافنشي ريزولف",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "انا <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": " مع خلفية هندسية قوية وسجل حافل في تحقيق نجاح الفريق. معروف بمهاراته التحليلية الحادة، والانتباه الدقيق للتفاصيل، والتواصل الفعال.",
+    "texts": [
+        "مطور Full Stack ذو خبرة",
+        "مطور شغوف",
+        "محب للتكنولوجيا",
+        "حلّال مبدع للمشاكل",
+        "صانع البرمجيات"
+    ]
 }

@@ -180,5 +180,14 @@
     "Email address": "电子邮件地址",
     "Your Message": "您的信息",
     "Bootstrap": "引导程序",
-    "DaVinci Resolve": "达芬奇调色"
+    "DaVinci Resolve": "达芬奇调色",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "我是 <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "拥有强大的工程背景和丰富的成功经验 推动团队成功。以敏锐的分析能力、对细节的严格关注和有效的沟通而闻名。",
+    "texts": [
+        "经验丰富的全栈开发者",
+        "热衷编码者",
+        "技术爱好者",
+        "创意问题解决者",
+        "软件工匠"
+    ]
 }

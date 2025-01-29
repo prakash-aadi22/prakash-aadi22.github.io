@@ -254,6 +254,35 @@ textarea {
   outline-color: var(--orange-yellow-crayola);
 }
 
+.typing-container {
+  display: inline-block;
+  white-space: wrap;
+  font-size: 19px;
+  font-weight: bold;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.typing {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 24px;
+  background: var(--text-gradient-yellow);
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/

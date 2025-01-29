@@ -180,5 +180,14 @@
     "Email address": "ఈమెయిల్ చిరునామా",
     "Your Message": "మీ సందేశం",
     "Bootstrap": "బూట్‌స్ట్రాప్",
-    "DaVinci Resolve": "డావించీ రిజాల్వ్"
+    "DaVinci Resolve": "డావించీ రిజాల్వ్",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "నేను <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "నాకు బలమైన ఇంజనీరింగ్ నేపథ్యం మరియు విజయవంతమైన ట్రాక్ రికార్డు ఉంది సంఘ విజయాన్ని నడిపించడం. నిర్దిష్ట విశ్లేషణాత్మక నైపుణ్యాలు, శ్రద్ధగా వివరాలపై దృష్టి మరియు సమర్థవంతమైన సంభాషణకు పేరుగాంచినవారు.",
+    "texts": [
+        "అనుభవజ్ఞుడైన ఫుల్ స్టాక్ డెవలపర్",
+        "ఉత్సాహిత కోడర్",
+        "సాంకేతికత అభిమాని",
+        "సృజనాత్మక సమస్య పరిష్కారకుడు",
+        "సాఫ్ట్వేర్ కార్మికుడు"
+    ]
 }

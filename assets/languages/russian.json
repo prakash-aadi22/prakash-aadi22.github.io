@@ -180,5 +180,14 @@
     "Email address": "Адрес электронной почты",
     "Your Message": "Ваше сообщение",
     "Bootstrap": "Бутстрап",
-    "DaVinci Resolve": "ДаВинчи Резолв"
+    "DaVinci Resolve": "ДаВинчи Резолв",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "Я <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "с солидным инженерным фоном и отличной репутацией в достижении успеха команды. Известен(на) своими острыми аналитическими навыками, тщательным вниманием к деталям и эффективным общением.",
+    "texts": [
+        "Опытный Full Stack разработчик",
+        "Страстный программист",
+        "Энтузиаст технологий",
+        "Креативный решатель проблем",
+        "Мастер программного обеспечения"
+    ]
 }

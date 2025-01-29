@@ -180,5 +180,14 @@
     "Email address": "Endereço de e-mail",
     "Your Message": "Sua mensagem",
     "Bootstrap": "Inicialização",
-    "DaVinci Resolve": "Resolução DaVinci"
+    "DaVinci Resolve": "Resolução DaVinci",
+    "I'm <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>": "Sou um(a) <span class='typing-container'> <span class='typing' id='typing-text'></span> <span class='cursor'></span></span>",
+    "with a robust engineering background and a strong track record of driving team success. Known for sharp analytical skills, meticulous attention to detail, and effective communication.": "com uma sólida formação em engenharia e um histórico forte impulsionando o sucesso da equipe. Conhecido(a) por suas habilidades analíticas afiadas, atenção meticulosa aos detalhes e comunicação eficaz.",
+    "texts": [
+        "Desenvolvedor Full Stack Experiente",
+        "Codificador Apaixonado",
+        "Entusiasta de Tecnologia",
+        "Resolutor Criativo de Problemas",
+        "Artesão de Software"
+    ]
 }
