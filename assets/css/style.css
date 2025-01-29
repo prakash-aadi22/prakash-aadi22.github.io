@@ -258,7 +258,7 @@ textarea {
 .typing-container {
   display: inline-block;
   white-space: wrap;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: bold;
   overflow: hidden;
   display: flex;
