@@ -529,5 +529,3 @@ function resetTypingEffect() {
     typingElement.innerHTML = ''; // Clear the current text
   }
 }
-
-// typeEffect();
