@@ -704,12 +704,12 @@ main {
 }
 
 /* .language-dropdown option {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   padding: 5px;
   font-size: 16px;
   color: #00ff0d;
   background-color: #1e00ff;
   border: none;
-  cursor: pointer;
 }
 
 .language-dropdown option:hover {
