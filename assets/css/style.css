@@ -116,8 +116,22 @@ body.light-theme {
   background: var(--white-1);
 }
 
-/* "zoom-in" transition effect when hovering over */
+#language-disclaimer {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--onyx);
+  color: var(--bittersweet-shimmer);
+  padding: 5px 15px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 var(--smoky-black);
+  z-index: 1000;
+  text-align: center;
+}
 
+/* "zoom-in" transition effect when hovering over */
 img:hover:not(.avatar-box img),
 .navbar-item:hover,
 .contact-link:hover,
@@ -2127,6 +2141,10 @@ textarea.form-input::-webkit-resizer {
 
   body::-webkit-scrollbar-button {
     height: 60px;
+  }
+
+  #language-disclaimer {
+    left: 55%;
   }
 
   /**

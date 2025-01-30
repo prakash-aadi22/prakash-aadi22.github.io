@@ -367,6 +367,17 @@ document.getElementById('languageSwitcher').addEventListener('change', (event) =
   currentLanguage = event.target.value; // Update the current language
   localStorage.setItem('currentLanguage', currentLanguage); // Save the selected language to localStorage
   loadLanguage(currentLanguage); // Load and apply the new language
+
+  // Show disclaimer message
+  if (currentLanguage !== "english") {
+    showDisclaimer("Please note: Translations are AI-generated and might contain inaccuracies.");
+  } else {
+    // Remove disclaimer if switching back to English
+    const disclaimer = document.getElementById("language-disclaimer");
+    if (disclaimer) {
+      disclaimer.remove();
+    }
+  }
 });
 
 // Load the default language and active page on page load
@@ -528,4 +539,29 @@ function resetTypingEffect() {
   if (typingElement) {
     typingElement.innerHTML = ''; // Clear the current text
   }
+}
+
+// Disclaimer
+function showDisclaimer(message) {
+  // Remove existing disclaimer if any
+  const existingDisclaimer = document.getElementById("language-disclaimer");
+  if (existingDisclaimer) {
+    existingDisclaimer.remove();
+  }
+
+  const disclaimer = document.createElement('div');
+  disclaimer.textContent = message;
+  disclaimer.id = "language-disclaimer";
+
+  document.body.appendChild(disclaimer);
+
+  // Remove disclaimer when clicked
+  disclaimer.addEventListener('click', () => {
+    disclaimer.remove();
+  });
+
+  // Remove after 5 seconds
+  setTimeout(() => {
+    disclaimer.remove();
+  }, 5000);
 }
