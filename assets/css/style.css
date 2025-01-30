@@ -671,7 +671,6 @@ main {
 .language-icon:hover::after {
   content: "Change Language";
   position: absolute;
-  bottom: -25px;
   left: 10%;
   transform: translateX(-50%);
   color: var(--orange-yellow-crayola);
