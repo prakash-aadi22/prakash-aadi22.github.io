@@ -2538,10 +2538,10 @@
 
             <div class="input-wrapper">
               <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Full name"
-                data-translate="Full name" required data-form-input>
+                data-translate="Full name" maxlength="50" onblur="validateName()" required data-form-input>
 
               <input type="email" id="email" name="email" class="form-input" placeholder="Email address"
-                data-translate="Email address" required data-form-input>
+                data-translate="Email address" onblur="validateEmail()" required data-form-input>
             </div>
 
             <textarea name="message" id="message" class="form-input" placeholder="Your Message"

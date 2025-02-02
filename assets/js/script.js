@@ -106,6 +106,34 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
+// Name Validation
+function validateName() {
+  let nameInput = document.getElementById('fullName');
+  let name = nameInput.value.trim(); // Get trimmed input value
+
+  if (name.length > 50) {
+    nameInput.style.border = "1px solid var(--bittersweet-shimmer)"; // Apply red border
+  } else if (name.length <= 0) {
+    nameInput.style.border = ""; // Rest border
+  } else {
+    nameInput.style.border = "1px solid var(--orange-yellow-crayola)"; // Apply yellow border
+  }
+}
+
+// Email Validation
+function validateEmail() {
+  let emailInput = document.getElementById('email');
+  let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,10}$/;
+
+  if (emailInput.value && !emailRegex.test(emailInput.value)) {
+    emailInput.style.border = "1px solid var(--bittersweet-shimmer)"; // Highlight input border in red
+  } else if (emailInput.value == "") {
+    emailInput.style.border = ""; // Rest border
+  } else {
+    emailInput.style.border = "1px solid var(--orange-yellow-crayola)"; // Highlight input border in yellow
+  }
+}
+
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -139,6 +167,11 @@ const showSuccessMessage = () => {
 // Add submit event to the form
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  let nameInput = document.getElementById('fullName');
+  let emailInput = document.getElementById('email');
+  nameInput.style.border = ""; // Rest border
+  emailInput.style.border = ""; // Rest border
 
   // Collect form data
   const formData = new FormData(form);
