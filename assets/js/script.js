@@ -598,3 +598,50 @@ function showDisclaimer(message) {
     disclaimer.remove();
   }, 5000);
 }
+
+
+// Print
+function printDiv() {
+  let myWindow = window.open(
+    '',
+    '',
+    `width=${screen.width},height=${screen.height},left=0,top=0`
+  );
+
+  // Ensure htmlContent is a complete HTML document
+  let htmlContent = `
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aditya Prakash Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+
+    </style>
+  </head>
+  <body>
+
+
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center">
+      <h1 class="fw-bold">Work on progress!</h1>
+    </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
+`;
+
+  myWindow.document.write(htmlContent);
+  myWindow.focus();
+
+  setTimeout(() => {
+    myWindow.print();
+    myWindow.close();
+  }, 50);
+}
