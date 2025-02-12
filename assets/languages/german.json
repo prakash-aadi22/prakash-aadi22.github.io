@@ -189,5 +189,13 @@
         "Technologiebegeisterter",
         "Kreativer Problemlöser",
         "Software-Handwerker"
-    ]
+    ],
+    "React": "React",
+    "Microsoft 365": "Microsoft 365",
+    "Microsoft Word": "Microsoft Word",
+    "Microsoft Excel": "Microsoft Excel",
+    "Microsoft PowerPoint": "Microsoft PowerPoint",
+    "Adobe": "Adobe",
+    "Adobe Photoshop": "Adobe Photoshop",
+    "Adobe Lightroom": "Adobe Lightroom"
 }
