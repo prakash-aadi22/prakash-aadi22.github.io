@@ -242,6 +242,13 @@ textarea {
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   position: relative;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#emailId-icon{
+  color: var(--orange-yellow-crayola);
 }
 
 .emailId:hover::after {
