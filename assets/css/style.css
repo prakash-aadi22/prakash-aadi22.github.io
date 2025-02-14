@@ -469,7 +469,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 140px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -514,7 +514,7 @@ main {
   top: -15px;
   right: -15px;
   border-radius: 0 15px;
-  font-size: 13px;
+  font-size: 20px;
   color: var(--orange-yellow-crayola);
   background: var(--border-gradient-onyx);
   padding: 10px;
