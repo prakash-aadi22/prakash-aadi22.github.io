@@ -247,7 +247,7 @@ textarea {
   gap: 6px;
 }
 
-#emailId-icon{
+#emailId-icon {
   color: var(--orange-yellow-crayola);
 }
 
@@ -1092,6 +1092,15 @@ main {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timeline-text b,
+.timeline-text u,
+.timeline-text a {
+  color: var(--light-gray);
 }
 
 /**
