@@ -200,7 +200,7 @@ const showCopiedMessage = () => {
   document.body.appendChild(successMessage);
   setTimeout(() => {
     successMessage.remove();
-  }, 3000);
+  }, 2000);
 };
 
 function copyToClipboard() {
@@ -215,6 +215,13 @@ function copyToClipboard() {
   document.body.removeChild(tempInput);
 
   showCopiedMessage();
+
+  const icon = document.getElementById("emailId-icon");
+  icon.setAttribute("name", "checkmark-done-outline");
+
+  setTimeout(() => {
+    icon.setAttribute("name", "clipboard-outline");
+  }, 1500);
 }
 
 
