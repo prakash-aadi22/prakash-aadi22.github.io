@@ -111,11 +111,6 @@ body {
   cursor: url("../images/cursor-25.png"), auto !important;
 }
 
-/* light theme */
-body.light-theme {
-  background: var(--white-1);
-}
-
 #language-disclaimer {
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   position: fixed;
@@ -317,12 +312,6 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
-}
-
-/* light theme */
-body.light-theme .sidebar,
-body.light-theme article {
-  background: var(--white-2);
 }
 
 .separator {
@@ -2288,4 +2277,59 @@ textarea.form-input::-webkit-resizer {
   .timeline-text {
     max-width: 700px;
   }
+}
+
+
+/*-----------------------------------*\
+  LIGHT THEME OVERRIDES
+  (Transforms dark theme styling into a light theme)
+\*-----------------------------------*/
+
+body.light-theme,
+body.light-theme .sidebar-info .title,
+body.light-theme .avatar-box,
+body.light-theme .has-scrollbar::-webkit-scrollbar-track {
+  background: var(--light-gray-70);
+}
+
+body.light-theme,
+body.light-theme *:not(ion-icon):not(.icon-box),
+body.light-theme .form-input::placeholder {
+  color: var(--eerie-black-1);
+}
+
+body.light-theme .icon-box::before,
+body.light-theme .service-item::before,
+body.light-theme .content-card::before,
+body.light-theme .project-post-item>a::before,
+body.light-theme .project-item-icon-box,
+body.light-theme .form-btn::before,
+body.light-theme .modal-avatar-box,
+body.light-theme .modal-close-btn,
+body.light-theme .testimonials-avatar-box {
+  background: var(--white-1);
+}
+
+body.light-theme .sidebar,
+body.light-theme article,
+body.light-theme .navbar,
+body.light-theme .modal-container.active .testimonials-modal {
+  background: var(--white-2);
+}
+
+body.light-theme .navbar-link.active,
+body.light-theme .language-switcher .language-icon {
+  color: var(--orange-yellow-crayola);
+}
+
+body.light-theme .emailId:hover::after,
+body.light-theme .language-icon:hover::after,
+body.light-theme .language-dropdown,
+body.light-theme .success-message {
+  background: var(--bg-gradient-yellow-1);
+  color: var(--eerie-black-1);
+}
+
+body.light-theme .mapbox iframe {
+  filter: grayscale(1) invert(0);
 }
