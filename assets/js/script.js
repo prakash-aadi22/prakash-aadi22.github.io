@@ -349,7 +349,8 @@ navigationLinks.forEach(link => {
 });
 
 // Default to 'english' if no language is stored in localStorage
-let currentLanguage = localStorage.getItem('currentLanguage') || 'english';
+let currentLanguage = localStorage.getItem('currentLanguage') ?? 'english';
+localStorage.setItem('currentLanguage', currentLanguage);
 let texts = [];
 
 // Function to load language data
