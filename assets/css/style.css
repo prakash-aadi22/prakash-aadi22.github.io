@@ -2306,6 +2306,7 @@ body.light-theme .project-item-icon-box,
 body.light-theme .form-btn::before,
 body.light-theme .modal-avatar-box,
 body.light-theme .modal-close-btn,
+body.light-theme .info_more-btn::before,
 body.light-theme .testimonials-avatar-box {
   background: var(--white-1);
 }
