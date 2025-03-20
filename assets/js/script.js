@@ -464,64 +464,71 @@ languageSwitcher.addEventListener("blur", () => {
   languageIcon.classList.remove("dropdown-open");
 });
 
-// Theme
-function changeTheme() {
-  const body = document.body;
-  const themeToggle = document.querySelector('.theme-link');
-  const iconBox = document.querySelector('.theme-box ion-icon');
-
-  // Check the current theme
-  const isDarkTheme = localStorage.getItem('theme') === 'dark';
-
-  if (isDarkTheme) {
-    // Switch to light theme
-    body.classList.remove('dark-theme');
-    body.classList.add('light-theme');
-
-    themeToggle.setAttribute('data-translate', 'Light');
-    themeToggle.textContent = 'Light';
-    iconBox.setAttribute('name', 'sunny-outline');
-
-    // Save the theme in localStorage
-    localStorage.setItem('theme', 'light');
-  } else {
-    // Switch to dark theme
-    body.classList.remove('light-theme');
-    body.classList.add('dark-theme');
-
-    themeToggle.setAttribute('data-translate', 'Dark');
-    themeToggle.textContent = 'Dark';
-    iconBox.setAttribute('name', 'moon-outline');
-
-    // Save the theme in localStorage
-    localStorage.setItem('theme', 'dark');
-  }
+// Toggle the dropdown on clicking the selected theme
+function toggleThemeDropdown(event) {
+  event.stopPropagation(); // Prevents immediate closure when clicking inside
+  const dropdown = document.getElementById("themeDropdown");
+  dropdown.classList.toggle("open");
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+// Close dropdown if user clicks anywhere else on the page
+document.addEventListener("click", function () {
+  const dropdown = document.getElementById("themeDropdown");
+  dropdown.classList.remove("open");
+});
+
+// Apply a chosen theme
+function selectTheme(theme) {
   const body = document.body;
-  const themeToggle = document.querySelector('.theme-link');
-  const iconBox = document.querySelector('.theme-box ion-icon');
-  let savedTheme = localStorage.getItem('theme') || 'dark';
+  const themeIcon = document.querySelector(".theme-box ion-icon");
+  const selectedThemeText = document.getElementById("selectedTheme");
 
-  if (savedTheme === 'light') {
-    // Apply light theme
-    body.classList.add('light-theme');
+  // Possible icons for each theme
+  const themeIcons = {
+    "dark-theme": "moon-outline",
+    "light-theme": "sunny-outline",
+    "oceanic-theme": "partly-sunny-outline",
+    "sunset-theme": "partly-sunny-outline",
+  };
 
-    themeToggle.setAttribute('data-translate', 'Light');
-    themeToggle.textContent = 'Light';
-    iconBox.setAttribute('name', 'sunny-outline');
-  } else {
-    // Set theme to localStorage
-    localStorage.setItem('theme', 'dark');
+  // Remove all themes and add the new one
+  body.classList.remove("dark-theme", "light-theme", "oceanic-theme", "sunset-theme");
+  body.classList.add(theme);
 
-    // Apply dark theme
-    body.classList.add('dark-theme');
+  // Update icon and text
+  themeIcon.setAttribute("name", themeIcons[theme]);
+  selectedThemeText.textContent =
+    theme.replace("-theme", "").charAt(0).toUpperCase() +
+    theme.replace("-theme", "").slice(1);
 
-    themeToggle.setAttribute('data-translate', 'Dark');
-    themeToggle.textContent = 'Dark';
-    iconBox.setAttribute('name', 'moon-outline');
-  }
+  // Save theme preference
+  localStorage.setItem("theme", theme);
+}
+
+// On page load, apply the saved theme or default to dark-theme
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme") ?? "dark-theme";
+  localStorage.setItem('theme', savedTheme);
+  document.body.classList.add(savedTheme);
+
+  // Update icon and text
+  const themeIcon = document.querySelector(".theme-box ion-icon");
+  const selectedThemeText = document.getElementById("selectedTheme");
+
+  const themeIcons = {
+    "dark-theme": "moon-outline",
+    "light-theme": "sunny-outline",
+    "oceanic-theme": "partly-sunny-outline",
+    "sunset-theme": "partly-sunny-outline",
+  };
+
+  // Update the icon
+  themeIcon.setAttribute("name", themeIcons[savedTheme]);
+
+  // Update the displayed text ("Dark", "Light", or "Oceanic")
+  selectedThemeText.textContent =
+    savedTheme.replace("-theme", "").charAt(0).toUpperCase() +
+    savedTheme.replace("-theme", "").slice(1);
 });
 
 // Typing Effect

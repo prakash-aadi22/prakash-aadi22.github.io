@@ -199,7 +199,7 @@
 
               <a href="tel:+12133522795" class="contact-link" target="_blank" data-translate="+1 (213) 352-2795">+1
                 (213) 352-2795</a>
-              <p style="font-size: x-small; color: wheat; white-space: nowrap;">&#42 Wrong Number due to privacy</p>
+              <p id="num-info" style="font-size: x-small; color: wheat; white-space: nowrap;">&#42 Wrong Number due to privacy</p>
             </div>
 
           </li>
@@ -207,13 +207,24 @@
           <li class="contact-item">
 
             <div class="icon-box theme-box">
-              <ion-icon name="moon-outline" onclick="changeTheme()" class="theme-icon"></ion-icon>
+              <ion-icon name="moon-outline" class="theme-icon"></ion-icon>
             </div>
 
             <div class="contact-info theme-info">
-              <p class="contact-title theme-title" data-translate="Change Theme">Change Theme</p>
+              <p class="contact-title theme-title" data-translate="Change Theme">
+                Change Theme
+              </p>
 
-              <p class="contact-link theme-link" onclick="changeTheme()" data-translate="Dark">Dark</p>
+              <div class="selected-theme" onclick="toggleThemeDropdown(event)">
+                <p id="selectedTheme" data-translate="Dark">Dark</p>
+              </div>
+
+              <ul class="theme-dropdown" id="themeDropdown">
+                <li onclick="selectTheme('dark-theme')" data-translate="Dark">Dark</li>
+                <li onclick="selectTheme('light-theme')" data-translate="Light">Light</li>
+                <li onclick="selectTheme('oceanic-theme')" data-translate="Oceanic">Oceanic</li>
+                <li onclick="selectTheme('sunset-theme')" data-translate="Sunset">Sunset</li>
+              </ul>
             </div>
 
           </li>
