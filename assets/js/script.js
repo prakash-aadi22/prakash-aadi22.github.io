@@ -476,7 +476,6 @@ document.addEventListener("click", function () {
   const dropdown = document.getElementById("themeDropdown");
   dropdown.classList.remove("open");
 });
-
 // Apply a chosen theme
 function selectTheme(theme) {
   const body = document.body;
@@ -491,15 +490,22 @@ function selectTheme(theme) {
     "sunset-theme": "partly-sunny-outline",
   };
 
+  // Theme translations (Modify these according to your language setup)
+  const themeTranslations = {
+    "dark-theme": "Dark",
+    "light-theme": "Light",
+    "oceanic-theme": "Oceanic",
+    "sunset-theme": "Sunset",
+  };
+
   // Remove all themes and add the new one
   body.classList.remove("dark-theme", "light-theme", "oceanic-theme", "sunset-theme");
   body.classList.add(theme);
 
   // Update icon and text
   themeIcon.setAttribute("name", themeIcons[theme]);
-  selectedThemeText.textContent =
-    theme.replace("-theme", "").charAt(0).toUpperCase() +
-    theme.replace("-theme", "").slice(1);
+  selectedThemeText.textContent = themeTranslations[theme]; // Change text
+  selectedThemeText.setAttribute("data-translate", themeTranslations[theme]); // Change data-translate
 
   // Save theme preference
   localStorage.setItem("theme", theme);
@@ -522,13 +528,16 @@ document.addEventListener("DOMContentLoaded", () => {
     "sunset-theme": "partly-sunny-outline",
   };
 
-  // Update the icon
-  themeIcon.setAttribute("name", themeIcons[savedTheme]);
+  const themeTranslations = {
+    "dark-theme": "Dark",
+    "light-theme": "Light",
+    "oceanic-theme": "Oceanic",
+    "sunset-theme": "Sunset",
+  };
 
-  // Update the displayed text ("Dark", "Light", or "Oceanic")
-  selectedThemeText.textContent =
-    savedTheme.replace("-theme", "").charAt(0).toUpperCase() +
-    savedTheme.replace("-theme", "").slice(1);
+  themeIcon.setAttribute("name", themeIcons[savedTheme]);
+  selectedThemeText.textContent = themeTranslations[savedTheme];
+  selectedThemeText.setAttribute("data-translate", themeTranslations[savedTheme]); // Change data-translate
 });
 
 // Typing Effect
