@@ -2318,8 +2318,7 @@ body.light-theme .modal-container.active .testimonials-modal {
   background: var(--white-2);
 }
 
-body.light-theme .navbar-link.active,
-body.light-theme .language-switcher .language-icon {
+body.light-theme .navbar-link.active {
   color: var(--orange-yellow-crayola);
 }
 
