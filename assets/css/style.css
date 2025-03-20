@@ -2437,13 +2437,13 @@ body.sunset-theme #emailId-icon {
 }
 
 body.sunset-theme .timeline-text b,
-.timeline-text u,
-.timeline-text a {
+body.sunset-theme .timeline-text u,
+body.sunset-theme .timeline-text a {
   color: #ff5e62;
 }
 
 body.sunset-theme .h4,
-.h5 {
+body.sunset-theme .h5 {
   color: #4f180a;
 }
 
