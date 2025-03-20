@@ -198,5 +198,9 @@
     "Adobe": "Адобе",
     "Adobe Photoshop": "Адобе Фотошоп",
     "Adobe Lightroom": "Адобе Лайтрум",
-    "AWS": "ABC"
+    "AWS": "ABC",
+    "Dark": "Тёмный",
+    "Light": "Светлый",
+    "Oceanic": "Океанический",
+    "Sunset": "Закат"
 }

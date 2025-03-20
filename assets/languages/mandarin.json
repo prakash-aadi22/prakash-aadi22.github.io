@@ -198,5 +198,9 @@
     "Adobe": "Adobe",
     "Adobe Photoshop": "Adobe Photoshop",
     "Adobe Lightroom": "Adobe Lightroom",
-    "AWS": "亚马逊云服务"
+    "AWS": "亚马逊云服务",
+    "Dark": "深色",
+    "Light": "浅色",
+    "Oceanic": "海洋风格",
+    "Sunset": "日落"
 }

@@ -198,5 +198,9 @@
     "Adobe": "Adobe",
     "Adobe Photoshop": "Adobe Photoshop",
     "Adobe Lightroom": "Adobe Lightroom",
-    "AWS": "AWS"
+    "AWS": "AWS",
+    "Dark": "Oscuro",
+    "Light": "Ligero",
+    "Oceanic": "Oceánico",
+    "Sunset": "Puesta de sol"
 }
