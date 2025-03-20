@@ -2792,7 +2792,7 @@ body.oceanic-theme .success-message {
 }
 
 body.oceanic-theme .mapbox iframe {
-  filter: saturate(0.8) brightness(1.05);
+  filter: saturate(1.2) brightness(1);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(55, 92, 121, 0.15);
   border: 1px solid rgba(181, 213, 231, 0.5);
