@@ -136,6 +136,14 @@ img:hover:not(.avatar-box img),
   transition: transform 0.3s ease-in-out;
 }
 
+.contact-link{
+  max-width: max-content;
+}
+
+.theme-icon {
+  cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+}
+
 ion-icon:hover {
   transform: scale(1.2);
   transition: transform 0.3s ease-in-out;
