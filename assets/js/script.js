@@ -476,6 +476,7 @@ document.addEventListener("click", function () {
   const dropdown = document.getElementById("themeDropdown");
   dropdown.classList.remove("open");
 });
+
 // Apply a chosen theme
 function selectTheme(theme) {
   const body = document.body;
@@ -509,6 +510,10 @@ function selectTheme(theme) {
 
   // Save theme preference
   localStorage.setItem("theme", theme);
+
+  // Change Language
+  let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
+  loadLanguage(selectedLanguage);
 }
 
 // On page load, apply the saved theme or default to dark-theme
@@ -538,6 +543,10 @@ document.addEventListener("DOMContentLoaded", () => {
   themeIcon.setAttribute("name", themeIcons[savedTheme]);
   selectedThemeText.textContent = themeTranslations[savedTheme];
   selectedThemeText.setAttribute("data-translate", themeTranslations[savedTheme]); // Change data-translate
+
+  // Change Language
+  let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
+  loadLanguage(selectedLanguage);
 });
 
 // Typing Effect
