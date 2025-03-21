@@ -2304,6 +2304,7 @@ textarea.form-input::-webkit-resizer {
   z-index: 999;
   max-height: 200px;
   overflow-y: auto;
+  backdrop-filter: blur(5px);
 }
 
 .theme-dropdown.open {
@@ -4273,10 +4274,7 @@ body.golden-hour-theme ol li {
 }
 
 body.golden-hour-theme .theme-dropdown {
-  background: linear-gradient(45deg, rgba(255, 249, 196, 0.95), rgba(255, 236, 179, 0.95));
-  border: 1px solid rgba(255, 180, 0, 0.4);
-  box-shadow: 0 4px 12px rgba(230, 140, 0, 0.2);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(45deg, rgba(255, 204, 128, 0.1), rgba(255, 152, 0, 0.1));
 }
 
 body.golden-hour-theme .theme-dropdown li {
@@ -4286,8 +4284,7 @@ body.golden-hour-theme .theme-dropdown li {
 }
 
 body.golden-hour-theme .theme-dropdown li:hover {
-  background: rgba(255, 193, 7, 0.2);
-  transform: translateX(3px);
+  background: linear-gradient(45deg, rgba(255, 204, 128, 0.1), rgba(255, 152, 0, 0.1));
 }
 
 body.golden-hour-theme #selectedTheme {
