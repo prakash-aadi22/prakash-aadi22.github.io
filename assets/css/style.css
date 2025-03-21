@@ -478,6 +478,10 @@ main {
   transition: var(--transition-2);
 }
 
+.no-transition * {
+  transition: none !important;
+}
+
 .sidebar.active {
   max-height: max-content;
 }

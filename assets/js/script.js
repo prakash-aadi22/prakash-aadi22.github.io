@@ -520,6 +520,16 @@ function selectTheme(theme) {
   // Change Language
   let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
   loadLanguage(selectedLanguage);
+
+  disableTransitionDuringThemeChange();
+}
+
+function disableTransitionDuringThemeChange() {
+  document.body.classList.add("no-transition");
+
+  setTimeout(() => {
+    document.body.classList.remove("no-transition");
+  }, 500);
 }
 
 // On page load, apply the saved theme or default to dark-theme
@@ -559,6 +569,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Change Language
   let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
   loadLanguage(selectedLanguage);
+
+  disableTransitionDuringThemeChange();
 });
 
 // Typing Effect
