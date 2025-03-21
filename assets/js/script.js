@@ -504,6 +504,7 @@ function selectTheme(theme) {
     "sunset-theme": "Sunset",
     "lavender-theme": "Lavender",
     "forest-theme": "Forest",
+    "coffee-theme": "Coffee",
     "aqua-theme": "Aqua",
     "golden-hour-theme": "Golden Hour",
   };
