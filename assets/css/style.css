@@ -2454,7 +2454,6 @@ body.sunset-theme article,
 body.sunset-theme .navbar,
 body.sunset-theme .modal-container.active .testimonials-modal {
   background: rgba(255, 250, 240, 0.85);
-  border-radius: 12px;
   box-shadow: 0 4px 20px rgba(97, 52, 26, 0.15);
   border: 1px solid rgba(255, 94, 98, 0.2);
 }
@@ -2508,7 +2507,6 @@ body.sunset-theme .success-message {
 
 body.sunset-theme .mapbox iframe {
   filter: sepia(0.3) saturate(1.4);
-  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(97, 52, 26, 0.2);
   border: 1px solid rgba(255, 153, 102, 0.3);
 }
@@ -2535,7 +2533,6 @@ body.sunset-theme input,
 body.sunset-theme textarea {
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #ffb88c;
-  border-radius: 8px;
   padding: 12px 16px;
   color: #5e2b19;
   transition: all 0.3s ease;
@@ -2608,7 +2605,6 @@ body.sunset-theme ::-webkit-scrollbar-thumb {
 }
 
 body.sunset-theme img {
-  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
@@ -2740,7 +2736,6 @@ body.oceanic-theme article,
 body.oceanic-theme .navbar,
 body.oceanic-theme .modal-container.active .testimonials-modal {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(55, 92, 121, 0.1);
   border: 1px solid rgba(181, 213, 231, 0.5);
 }
@@ -2795,7 +2790,6 @@ body.oceanic-theme .success-message {
 
 body.oceanic-theme .mapbox iframe {
   filter: saturate(1.2) brightness(1);
-  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(55, 92, 121, 0.15);
   border: 1px solid rgba(181, 213, 231, 0.5);
 }
@@ -2820,7 +2814,6 @@ body.oceanic-theme input,
 body.oceanic-theme textarea {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #b5d5e7;
-  border-radius: 6px;
   padding: 10px 14px;
   color: #2d4a63;
   transition: all 0.3s ease;
@@ -2858,7 +2851,6 @@ body.oceanic-theme .accent-line {
 
 body.oceanic-theme .card {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   border: 1px solid rgba(181, 213, 231, 0.5);
   padding: 20px;
   transition: all 0.3s ease;
@@ -2888,7 +2880,6 @@ body.oceanic-theme ::-webkit-scrollbar-thumb {
 }
 
 body.oceanic-theme img {
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
@@ -2982,7 +2973,6 @@ body.forest-theme article,
 body.forest-theme .navbar,
 body.forest-theme .modal-container.active .testimonials-modal {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(46, 70, 0, 0.1);
   border: 1px solid rgba(150, 190, 150, 0.5);
 }
@@ -3037,7 +3027,6 @@ body.forest-theme .success-message {
 
 body.forest-theme .mapbox iframe {
   filter: saturate(1.2) brightness(1);
-  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(46, 70, 0, 0.15);
   border: 1px solid rgba(150, 190, 150, 0.5);
 }
@@ -3062,7 +3051,6 @@ body.forest-theme input,
 body.forest-theme textarea {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #a3c293;
-  border-radius: 6px;
   padding: 10px 14px;
   color: #2e4600;
   transition: all 0.3s ease;
@@ -3100,7 +3088,6 @@ body.forest-theme .accent-line {
 
 body.forest-theme .card {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   border: 1px solid rgba(150, 190, 150, 0.5);
   padding: 20px;
   transition: all 0.3s ease;
@@ -3130,7 +3117,6 @@ body.forest-theme ::-webkit-scrollbar-thumb {
 }
 
 body.forest-theme img {
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
@@ -3224,7 +3210,6 @@ body.lavender-theme article,
 body.lavender-theme .navbar,
 body.lavender-theme .modal-container.active .testimonials-modal {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(93, 71, 119, 0.1);
   border: 1px solid rgba(197, 173, 230, 0.5);
 }
@@ -3279,7 +3264,6 @@ body.lavender-theme .success-message {
 
 body.lavender-theme .mapbox iframe {
   filter: saturate(1.1) brightness(1);
-  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(93, 71, 119, 0.15);
   border: 1px solid rgba(197, 173, 230, 0.5);
 }
@@ -3304,7 +3288,6 @@ body.lavender-theme input,
 body.lavender-theme textarea {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #c5ade6;
-  border-radius: 6px;
   padding: 10px 14px;
   color: #5d4777;
   transition: all 0.3s ease;
@@ -3342,7 +3325,6 @@ body.lavender-theme .accent-line {
 
 body.lavender-theme .card {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   border: 1px solid rgba(197, 173, 230, 0.5);
   padding: 20px;
   transition: all 0.3s ease;
@@ -3372,7 +3354,6 @@ body.lavender-theme ::-webkit-scrollbar-thumb {
 }
 
 body.lavender-theme img {
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
@@ -3466,7 +3447,6 @@ body.coffee-theme article,
 body.coffee-theme .navbar,
 body.coffee-theme .modal-container.active .testimonials-modal {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   box-shadow: 0 4px 15px rgba(75, 54, 33, 0.1);
   border: 1px solid rgba(180, 150, 120, 0.5);
 }
@@ -3521,7 +3501,6 @@ body.coffee-theme .success-message {
 
 body.coffee-theme .mapbox iframe {
   filter: saturate(1.2) brightness(1);
-  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(75, 54, 33, 0.15);
   border: 1px solid rgba(180, 150, 120, 0.5);
 }
@@ -3546,7 +3525,6 @@ body.coffee-theme input,
 body.coffee-theme textarea {
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid #c1a68c;
-  border-radius: 6px;
   padding: 10px 14px;
   color: #4b3621;
   transition: all 0.3s ease;
@@ -3584,7 +3562,6 @@ body.coffee-theme .accent-line {
 
 body.coffee-theme .card {
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   border: 1px solid rgba(180, 150, 120, 0.5);
   padding: 20px;
   transition: all 0.3s ease;
@@ -3614,7 +3591,6 @@ body.coffee-theme ::-webkit-scrollbar-thumb {
 }
 
 body.coffee-theme img {
-  border-radius: 8px;
   transition: all 0.3s ease;
 }
 
