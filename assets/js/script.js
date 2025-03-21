@@ -349,8 +349,39 @@ navigationLinks.forEach(link => {
 });
 
 // Default to 'english' if no language is stored in localStorage
-let currentLanguage = localStorage.getItem('currentLanguage') ?? 'english';
+const validLanguage = [
+  "english",
+  "hindi",
+  "french",
+  "spanish",
+  "russian",
+  "bengali",
+  "mandarin",
+  "arabic",
+  "portuguese",
+  "german",
+  "marathi",
+  "tamil",
+  "telugu",
+  "kannada",
+  "gujarati",
+  "odia",
+  "malayalam",
+  "punjabi",
+  "assamese",
+  "sanskrit",
+];
+
+let currentLanguage = localStorage.getItem("currentLanguage");
+
+if (!validLanguage.includes(currentLanguage)) {
+  localStorage.removeItem("currentLanguage");
+  currentLanguage = "english";
+  localStorage.setItem("currentLanguage", currentLanguage);
+}
+
 localStorage.setItem('currentLanguage', currentLanguage);
+
 let texts = [];
 
 // Function to load language data
@@ -559,6 +590,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   localStorage.setItem('theme', savedTheme);
+
   document.body.classList.add(savedTheme);
 
   // Update icon and text
