@@ -2372,10 +2372,40 @@ body.light-theme article,
 body.light-theme .navbar,
 body.light-theme .modal-container.active .testimonials-modal {
   background: var(--white-2);
+  /* border: none; */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .navbar {
+  padding-bottom: 9px;
+}
+
+body.light-theme .navbar-link {
+  color: var(--eerie-black-1);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+body.light-theme .navbar-link:hover {
+  color: var(--orange-yellow-crayola);
 }
 
 body.light-theme .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  color: #ff9800;
+  font-weight: 600;
+}
+
+body.light-theme .navbar-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 2px;
 }
 
 body.light-theme .emailId:hover::after,
