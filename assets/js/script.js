@@ -487,11 +487,13 @@ function selectTheme(theme) {
   const themeIcons = {
     "dark-theme": "moon-outline",
     "light-theme": "sunny-outline",
-    "oceanic-theme": "water-outline",
+    "oceanic-theme": "boat-outline",
     "sunset-theme": "partly-sunny-outline",
     "lavender-theme": "flower-outline",
     "forest-theme": "leaf-outline",
     "coffee-theme": "cafe-outline",
+    "aqua-theme": "water-outline",
+    "golden-hour-theme": "contrast-outline",
   };
 
   // Theme translations (Modify these according to your language setup)
@@ -502,11 +504,12 @@ function selectTheme(theme) {
     "sunset-theme": "Sunset",
     "lavender-theme": "Lavender",
     "forest-theme": "Forest",
-    "coffee-theme": "Coffee",
+    "aqua-theme": "Aqua",
+    "golden-hour-theme": "Golden Hour",
   };
 
   // Remove all themes and add the new one
-  body.classList.remove("dark-theme", "light-theme", "oceanic-theme", "sunset-theme", "lavender-theme", "forest-theme", "coffee-theme");
+  body.classList.remove("dark-theme", "light-theme", "oceanic-theme", "sunset-theme", "lavender-theme", "forest-theme", "coffee-theme", "aqua-theme", "golden-hour-theme");
   body.classList.add(theme);
 
   // Update icon and text
@@ -545,11 +548,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcons = {
     "dark-theme": "moon-outline",
     "light-theme": "sunny-outline",
-    "oceanic-theme": "water-outline",
+    "oceanic-theme": "boat-outline",
     "sunset-theme": "partly-sunny-outline",
     "lavender-theme": "flower-outline",
     "forest-theme": "leaf-outline",
     "coffee-theme": "cafe-outline",
+    "aqua-theme": "water-outline",
+    "golden-hour-theme": "contrast-outline",
   };
 
   const themeTranslations = {
@@ -560,6 +565,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "lavender-theme": "Lavender",
     "forest-theme": "Forest",
     "coffee-theme": "Coffee",
+    "aqua-theme": "Aqua",
+    "golden-hour-theme": "Golden Hour",
   };
 
   themeIcon.setAttribute("name", themeIcons[savedTheme]);
