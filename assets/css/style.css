@@ -130,7 +130,8 @@ body {
 img:hover:not(.avatar-box img),
 .navbar-item:hover,
 .contact-link:hover,
-.emailId:hover {
+.emailId:hover,
+#selectedTheme:hover {
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
@@ -4036,12 +4037,6 @@ body.golden-hour-theme .avatar-box,
 body.golden-hour-theme .avatar-box:hover,
 body.golden-hour-theme .avatar-box img:hover {
   background: linear-gradient(to top, #FAD02E, #FFB347, #FFCC33);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.golden-hour-theme .avatar-box:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(230, 140, 0, 0.3);
 }
 
 body.golden-hour-theme .sidebar,
