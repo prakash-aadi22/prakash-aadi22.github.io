@@ -538,7 +538,26 @@ function disableTransitionDuringThemeChange() {
 
 // On page load, apply the saved theme or default to dark-theme
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme") ?? "dark-theme";
+  const validThemes = [
+    "dark-theme",
+    "light-theme",
+    "oceanic-theme",
+    "sunset-theme",
+    "lavender-theme",
+    "forest-theme",
+    "coffee-theme",
+    "aqua-theme",
+    "golden-hour-theme"
+  ];
+
+  let savedTheme = localStorage.getItem("theme");
+
+  if (!validThemes.includes(savedTheme)) {
+    localStorage.removeItem("theme");
+    savedTheme = "dark-theme";
+    localStorage.setItem("theme", savedTheme);
+  }
+
   localStorage.setItem('theme', savedTheme);
   document.body.classList.add(savedTheme);
 
