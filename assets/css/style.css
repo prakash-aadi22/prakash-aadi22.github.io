@@ -58,7 +58,8 @@
    */
 
   /* font-family */
-  --ff-amita: "Amita", serif;
+  --ff-poppins: "Poppins", sans-serif;
+  /* --ff-amita: "Amita", serif; */
 
   /* font-size */
   --fs-1: 24px;
@@ -101,7 +102,7 @@
 \*-----------------------------------*/
 
 html {
-  font-family: var(--ff-amita);
+  font-family: var(--ff-poppins);
   cursor: url("../images/cursor-25.png"), auto !important;
 }
 
