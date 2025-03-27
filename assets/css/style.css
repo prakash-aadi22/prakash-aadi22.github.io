@@ -58,7 +58,7 @@
    */
 
   /* font-family */
-  --ff-poppins: "Poppins", sans-serif;
+  /* --ff-poppins: "Poppins", sans-serif; */
   --ff-amita: "Amita", serif;
 
   /* font-size */
@@ -100,6 +100,22 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
+
+/* Amita Regular */
+@font-face {
+  font-family: 'Amita';
+  src: url('/assets/fonts/Amita/Amita-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Amita Bold */
+@font-face {
+  font-family: 'Amita';
+  src: url('/assets/fonts/Amita/Amita-Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
 
 html {
   font-family: var(--ff-amita);
