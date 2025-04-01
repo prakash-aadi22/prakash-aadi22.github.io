@@ -2436,6 +2436,7 @@ body.light-theme .filter-select,
 body.light-theme .select-list,
 body.light-theme .select-item,
 body.light-theme .select-item button {
+  border: none;
   background: var(--light-gray-70);
 }
 
