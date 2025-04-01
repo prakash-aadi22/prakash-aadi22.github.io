@@ -2786,11 +2786,7 @@ body.sunset-theme .select-item button {
   color: var(--white-1) !important;
 }
 
-body.sunset-theme .theme-dropdown li,
-body.sunset-theme .select-value,
-body.sunset-theme .filter-select,
-body.sunset-theme .select-list,
-body.sunset-theme .select-item button {
+body.sunset-theme .theme-dropdown li {
   color: #5e2b19;
 }
 
