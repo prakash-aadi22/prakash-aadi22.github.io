@@ -219,5 +219,7 @@
     "Webex by Cisco": "Вебекс от Cisco",
     "Discord": "Дискорд",
     "Google Meet": "Гугл Мит",
-    "Google Chat": "Гугл Чат"
+    "Google Chat": "Гугл Чат",
+    "Frontend": "Фронтенд",
+    "Backend": "Бэкенд"
 }

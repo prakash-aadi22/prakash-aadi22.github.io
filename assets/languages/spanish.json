@@ -219,5 +219,7 @@
     "Webex by Cisco": "Webex por Cisco",
     "Discord": "Discordia",
     "Google Meet": "Google Meet",
-    "Google Chat": "Google Chat"
+    "Google Chat": "Google Chat",
+    "Frontend": "Frontend",
+    "Backend": "Backend"
 }

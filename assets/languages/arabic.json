@@ -219,5 +219,7 @@
     "Webex by Cisco": "ويبكس من سيسكو",
     "Discord": "ديسكورد",
     "Google Meet": "جوجل ميت",
-    "Google Chat": "جوجل شات"
+    "Google Chat": "جوجل شات",
+    "Frontend": "الواجهة الأمامية",
+    "Backend": "الواجهة الخلفية"
 }
