@@ -1592,6 +1592,14 @@ textarea.form-input::-webkit-resizer {
   background: var(--bg-gradient-jet);
 }
 
+#fullName:hover,
+#email:hover,
+#message:hover,
+#submitBtn:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
