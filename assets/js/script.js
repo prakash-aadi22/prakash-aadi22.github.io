@@ -374,6 +374,7 @@ const validLanguage = [
   "hindi",
   "french",
   "spanish",
+  "italian",
   "russian",
   "bengali",
   "mandarin",
