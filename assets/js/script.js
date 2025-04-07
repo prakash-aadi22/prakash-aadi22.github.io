@@ -391,6 +391,7 @@ const validLanguage = [
   "punjabi",
   "assamese",
   "sanskrit",
+  "japanese",
 ];
 
 let currentLanguage = localStorage.getItem("currentLanguage");
