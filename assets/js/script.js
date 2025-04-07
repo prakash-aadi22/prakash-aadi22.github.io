@@ -404,6 +404,17 @@ localStorage.setItem('currentLanguage', currentLanguage);
 
 let texts = [];
 
+function updateSelectedLanguageDisplay(languageValue) {
+  const selectedOption = document.querySelector(`#languageSwitcher .option[data-value="${languageValue}"]`);
+  const flagSrc = selectedOption.getAttribute("data-flag");
+  const languageName = selectedOption.querySelector("span").textContent;
+
+  const selectedLanguageDisplay = document.getElementById("selectedLanguageDisplay");
+  selectedLanguageDisplay.querySelector("img").src = flagSrc;
+  selectedLanguageDisplay.querySelector("img").alt = `${languageName} Flag`;
+  selectedLanguageDisplay.querySelector("span").textContent = languageName;
+}
+
 // Function to load language data
 function loadLanguage(language) {
   const url = `assets/languages/${language}.json`;
@@ -454,22 +465,39 @@ function getActivePageFromNav() {
   return activeLink ? activeLink.getAttribute('data-nav-link') : 'about'; // Default to 'about' if no active link
 }
 
-// Event listener for language switcher dropdown
-document.getElementById('languageSwitcher').addEventListener('change', (event) => {
-  currentLanguage = event.target.value; // Update the current language
-  localStorage.setItem('currentLanguage', currentLanguage); // Save the selected language to localStorage
-  loadLanguage(currentLanguage); // Load and apply the new language
-
-  // Show disclaimer message
-  if (currentLanguage !== "english") {
-    showDisclaimer("Please note: Translations are AI-generated and might contain inaccuracies.");
-  } else {
-    // Remove disclaimer if switching back to English
-    const disclaimer = document.getElementById("language-disclaimer");
-    if (disclaimer) {
-      disclaimer.remove();
-    }
+// Divder for language dropdown
+document.querySelectorAll('.optgroup').forEach(group => {
+  const label = group.getAttribute('data-label');
+  if (label) {
+    const labelElement = document.createElement('div');
+    labelElement.className = 'optgroup-label';
+    labelElement.textContent = label;
+    group.prepend(labelElement);
   }
+});
+
+// Add click event listeners to each custom option
+document.querySelectorAll("#languageSwitcher .option").forEach((option) => {
+  option.addEventListener("click", function () {
+    currentLanguage = this.getAttribute("data-value");
+    localStorage.setItem("currentLanguage", currentLanguage);
+
+    updateSelectedLanguageDisplay(currentLanguage);
+    loadLanguage(currentLanguage); // Load and apply the new language
+
+    // Close the dropdown after selection
+    languageSwitcherDiv.classList.remove("active");
+
+    // Show disclaimer message if not English
+    if (currentLanguage !== "english") {
+      showDisclaimer("Please note: Translations are AI-generated and might contain inaccuracies.");
+    } else {
+      const disclaimer = document.getElementById("language-disclaimer");
+      if (disclaimer) {
+        disclaimer.remove();
+      }
+    }
+  });
 });
 
 // Load the default language and active page on page load
@@ -478,6 +506,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const languageSwitcher = document.getElementById('languageSwitcher');
   languageSwitcher.value = currentLanguage; // Sync the dropdown with localStorage
 
+  updateSelectedLanguageDisplay(currentLanguage);
   loadLanguage(currentLanguage); // Load the language from localStorage or default
   showActivePage(getActivePageFromNav()); // Show the active page
 });

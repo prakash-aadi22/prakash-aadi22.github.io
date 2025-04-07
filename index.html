@@ -119,31 +119,103 @@
 
           <!-- Language Switcher -->
           <div class="language-switcher">
+
             <label for="languageSwitcher" class="language-icon">
-              <ion-icon name="language"></ion-icon>
+              <div class="selected-language" id="selectedLanguageDisplay">
+                <img src="./assets/flags/english.png" alt="English Flag" class="flag-icon">
+                <span>English</span>
+              </div>
+              <!-- <ion-icon name="language"></ion-icon> -->
             </label>
-            <select id="languageSwitcher" class="language-dropdown">
-              <option value="english">English</option>
-              <option value="hindi">Hindi</option>
-              <option value="french">French</option>
-              <option value="spanish">Spanish</option>
-              <option value="russian">Russian</option>
-              <option value="bengali">Bengali</option>
-              <option value="mandarin">Mandarin</option>
-              <option value="arabic">Arabic</option>
-              <option value="portuguese">Portuguese</option>
-              <option value="german">German</option>
-              <option value="marathi">Marathi</option>
-              <option value="tamil">Tamil</option>
-              <option value="telugu">Telugu</option>
-              <option value="kannada">Kannada</option>
-              <option value="gujarati">Gujarati</option>
-              <option value="odia">Odia</option>
-              <option value="malayalam">Malayalam</option>
-              <option value="punjabi">Punjabi</option>
-              <option value="assamese">Assamese</option>
-              <option value="sanskrit">Sanskrit</option>
-            </select>
+
+            <!-- Custom Dropdown (replacing the <select>) -->
+            <div id="languageSwitcher" class="language-dropdown">
+              <div class="optgroup" data-label="World Languages">
+                <div class="option" data-value="english" data-flag="./assets/flags/english.png">
+                  <img src="./assets/flags/english.png" alt="English Flag" class="flag-icon">
+                  <span>English</span>
+                </div>
+                <div class="option" data-value="french" data-flag="./assets/flags/french.png">
+                  <img src="./assets/flags/french.png" alt="French Flag" class="flag-icon">
+                  <span>French</span>
+                </div>
+                <div class="option" data-value="spanish" data-flag="./assets/flags/spanish.png">
+                  <img src="./assets/flags/spanish.png" alt="Spanish Flag" class="flag-icon">
+                  <span>Spanish</span>
+                </div>
+                <div class="option" data-value="russian" data-flag="./assets/flags/russian.png">
+                  <img src="./assets/flags/russian.png" alt="Russian Flag" class="flag-icon">
+                  <span>Russian</span>
+                </div>
+                <div class="option" data-value="mandarin" data-flag="./assets/flags/mandarin.png">
+                  <img src="./assets/flags/mandarin.png" alt="Mandarin Flag" class="flag-icon">
+                  <span>Mandarin</span>
+                </div>
+                <div class="option" data-value="arabic" data-flag="./assets/flags/arabic.png">
+                  <img src="./assets/flags/arabic.png" alt="Arabic Flag" class="flag-icon">
+                  <span>Arabic</span>
+                </div>
+                <div class="option" data-value="portuguese" data-flag="./assets/flags/portuguese.png">
+                  <img src="./assets/flags/portuguese.png" alt="Portuguese Flag" class="flag-icon">
+                  <span>Portuguese</span>
+                </div>
+                <div class="option" data-value="german" data-flag="./assets/flags/german.png">
+                  <img src="./assets/flags/german.png" alt="German Flag" class="flag-icon">
+                  <span>German</span>
+                </div>
+              </div>
+
+              <div class="optgroup" data-label="Indian Languages">
+                <div class="option" data-value="hindi" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Hindi Flag" class="flag-icon">
+                  <span>Hindi</span>
+                </div>
+                <div class="option" data-value="bengali" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Bengali Flag" class="flag-icon">
+                  <span>Bengali</span>
+                </div>
+                <div class="option" data-value="marathi" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Marathi Flag" class="flag-icon">
+                  <span>Marathi</span>
+                </div>
+                <div class="option" data-value="tamil" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Tamil Flag" class="flag-icon">
+                  <span>Tamil</span>
+                </div>
+                <div class="option" data-value="telugu" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Telugu Flag" class="flag-icon">
+                  <span>Telugu</span>
+                </div>
+                <div class="option" data-value="kannada" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Kannada Flag" class="flag-icon">
+                  <span>Kannada</span>
+                </div>
+                <div class="option" data-value="gujarati" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Gujarati Flag" class="flag-icon">
+                  <span>Gujarati</span>
+                </div>
+                <div class="option" data-value="odia" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Odia Flag" class="flag-icon">
+                  <span>Odia</span>
+                </div>
+                <div class="option" data-value="malayalam" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Malayalam Flag" class="flag-icon">
+                  <span>Malayalam</span>
+                </div>
+                <div class="option" data-value="punjabi" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Punjabi Flag" class="flag-icon">
+                  <span>Punjabi</span>
+                </div>
+                <div class="option" data-value="assamese" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Assamese Flag" class="flag-icon">
+                  <span>Assamese</span>
+                </div>
+                <div class="option" data-value="sanskrit" data-flag="./assets/flags/hindi.png">
+                  <img src="./assets/flags/hindi.png" alt="Sanskrit Flag" class="flag-icon">
+                  <span>Sanskrit</span>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
