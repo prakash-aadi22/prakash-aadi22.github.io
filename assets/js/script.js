@@ -440,6 +440,16 @@ function applyTranslations(translations) {
   document.querySelectorAll('[data-translate]').forEach(element => {
     let key = element.getAttribute('data-translate');
 
+    // For optgroup elements, update only the optgroup-label child if it exists
+    if (element.classList.contains('optgroup')) {
+      const labelElement = element.querySelector('.optgroup-label');
+      if (labelElement && translations[key]) {
+        labelElement.textContent = translations[key];
+      }
+      // Exit early so that child option elements are not removed.
+      return;
+    }
+
     // Update the texts array with new language data
     texts = translations.texts; // Fetch texts for the current language
 
