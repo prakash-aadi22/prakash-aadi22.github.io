@@ -120,11 +120,11 @@ body {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--onyx);
-  color: var(--bittersweet-shimmer);
+  background-color: #ff3425 !important;
+  color: #ffffff !important;
   padding: 5px 15px;
   border-radius: 25px;
-  box-shadow: 0 0 10px 0 var(--smoky-black);
+  box-shadow: 0px 5px 1px 2px var(--smoky-black);
   z-index: 1000;
   text-align: center;
 }
