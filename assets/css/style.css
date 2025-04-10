@@ -694,8 +694,9 @@ main {
 .language-icon:hover::after {
   content: "Change Language";
   position: absolute;
-  top: 100%;
+  bottom: 100%;
   left: 50%;
+  margin-bottom: 5px;
   transform: translateX(-50%);
   color: var(--orange-yellow-crayola);
   background: var(--bg-gradient-yellow-2);
@@ -2355,14 +2356,19 @@ textarea.form-input::-webkit-resizer {
   .language-switcher {
     margin-left: 30px;
   }
+
+  .language-icon:hover::after {
+    top: 100%;
+    height: max-content;
+    margin-top: 5px;
+  }
 }
 
 
 .theme-dropdown {
   display: none;
   position: absolute;
-  background: linear-gradient(45deg, #2b2b2b, #121212);
-  /* background: linear-gradient(45deg, rgba(70, 71, 74, 0.1), rgba(42, 82, 152, 0.1)); */
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
   padding: 0;
   margin: 0;
   list-style: none;
