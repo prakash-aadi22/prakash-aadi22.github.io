@@ -228,6 +228,7 @@ textarea {
 
 .audio-icon {
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
+  margin: 0 0 10px 4px;
 }
 
 .audioIcon {
