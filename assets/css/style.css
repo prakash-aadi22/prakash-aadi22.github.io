@@ -669,7 +669,6 @@ main {
   display: flex;
   position: relative;
   margin-top: 10px;
-  margin-left: 30px;
   width: min-content;
 }
 
@@ -2351,6 +2350,10 @@ textarea.form-input::-webkit-resizer {
 
   .timeline-text {
     max-width: 700px;
+  }
+
+  .language-switcher {
+    margin-left: 30px;
   }
 }
 
