@@ -9,10 +9,33 @@ const elementToggleFunc = function (elem) {
 const sidebar = document.querySelector("[data-sidebar]");
 const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
+// // sidebar toggle functionality for mobile
+// sidebarBtn.addEventListener("click", function () {
+//   elementToggleFunc(sidebar);
+// });
+
+let autoCloseTimer = null;
+
+// Apply "active" on load and start the timer to auto-close after seconds
+document.addEventListener("DOMContentLoaded", function () {
+  elementToggleFunc(sidebar); // open sidebar on load
+
+  // set a timer to remove "active"
+  autoCloseTimer = setTimeout(function () {
+    sidebar.classList.remove("active");
+  }, 1500);
+});
+
 // sidebar toggle functionality for mobile
 sidebarBtn.addEventListener("click", function () {
+  // If a manual click occurs, clear the auto-close timer so it doesn't close automatically
+  if (autoCloseTimer) {
+    clearTimeout(autoCloseTimer);
+    autoCloseTimer = null;
+  }
   elementToggleFunc(sidebar);
 });
+
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
