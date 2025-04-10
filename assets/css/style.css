@@ -669,7 +669,7 @@ main {
   display: flex;
   position: relative;
   margin-top: 10px;
-  margin-left: 40px;
+  margin-left: 30px;
   width: min-content;
 }
 
@@ -681,6 +681,10 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 5px 22px;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); */
+  border-radius: 50rem;
 }
 
 .language-icon:hover {
@@ -2539,6 +2543,10 @@ body.sunset-theme .language-icon {
   color: #5e2b19;
 }
 
+body.sunset-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(255, 0, 0, 0.5);
+}
+
 body.sunset-theme .contact-link,
 body.sunset-theme .contact-link address,
 body.sunset-theme .social-link,
@@ -2878,6 +2886,10 @@ body.oceanic-theme {
   color: #375c79;
 }
 
+body.oceanic-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(0, 131, 238, 0.5);
+}
+
 body.oceanic-theme .avatar-box,
 body.oceanic-theme .avatar-box:hover,
 body.oceanic-theme .avatar-box img:hover {
@@ -3154,6 +3166,10 @@ body.forest-theme .form-input::placeholder {
 body.forest-theme {
   background: linear-gradient(to bottom, #e0f2e9, #c1e1d2, #a2cfbc);
   color: #2e4600;
+}
+
+body.forest-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(12, 152, 2, 0.5);
 }
 
 body.forest-theme .avatar-box,
@@ -3438,6 +3454,10 @@ body.lavender-theme {
   color: #5d4777;
 }
 
+body.lavender-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(87, 3, 182, 0.5);
+}
+
 body.lavender-theme .avatar-box,
 body.lavender-theme .avatar-box:hover,
 body.lavender-theme .avatar-box img:hover {
@@ -3714,6 +3734,10 @@ body.coffee-theme .form-input::placeholder {
 body.coffee-theme {
   background: linear-gradient(to bottom, #f5e6d3, #e0cda9, #d2b48c);
   color: #4b3621;
+}
+
+body.coffee-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(207, 105, 2, 0.5);
 }
 
 body.coffee-theme .avatar-box,
@@ -3994,6 +4018,10 @@ body.aqua-theme {
   color: #004d40;
 }
 
+body.aqua-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(0, 185, 210, 0.5);
+}
+
 body.aqua-theme .avatar-box,
 body.aqua-theme .avatar-box:hover,
 body.aqua-theme .avatar-box img:hover {
@@ -4270,6 +4298,10 @@ body.golden-hour-theme {
 
 body.golden-hour-theme *:not(.icon):not([class*="gradient"]) {
   color: #3D2800;
+}
+
+body.golden-hour-theme .language-icon {
+  box-shadow: inset 0px 4px 8px rgba(255, 157, 0, 0.5);
 }
 
 body.golden-hour-theme .form-input::placeholder {
