@@ -623,54 +623,154 @@ main {
 
 .social-item .social-link:hover {
   color: var(--light-gray);
-  animation: wave 1s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Staggered animation delays */
-.social-item:nth-child(1) .social-link {
-  animation-delay: 0s;
+.social-item .social-link:hover::before {
+  transform: scale(1);
 }
 
-.social-item:nth-child(2) .social-link {
-  animation-delay: 0.2s;
+/* Individual color accents on hover */
+.social-item:nth-child(1) .social-link:hover {
+  color: #0077b5;
+  /* LinkedIn */
 }
 
-.social-item:nth-child(3) .social-link {
-  animation-delay: 0.4s;
+.social-item:nth-child(2) .social-link:hover {
+  color: #6e5494;
+  /* GitHub */
 }
 
-.social-item:nth-child(4) .social-link {
-  animation-delay: 0.6s;
+.social-item:nth-child(3) .social-link:hover {
+  color: #e4405f;
+  /* Instagram */
 }
 
-.social-item:nth-child(5) .social-link {
-  animation-delay: 0.8s;
+.social-item:nth-child(4) .social-link:hover {
+  color: #1DA1F2;
+  /* Twitter/X */
 }
 
-.social-item:nth-child(6) .social-link {
-  animation-delay: 1s;
+.social-item:nth-child(5) .social-link:hover {
+  color: #1877f2;
+  /* Facebook */
 }
 
-.social-item:nth-child(7) .social-link {
-  animation-delay: 1.2s;
+.social-item:nth-child(6) .social-link:hover {
+  color: #fffc00;
+  /* Snapchat */
 }
 
-/* Keyframes for the pulse & float effect */
-@keyframes pulseFloat {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+.social-item:nth-child(7) .social-link:hover {
+  color: #e60023;
+  /* Pinterest */
+}
+
+/* Animated background on hover */
+.social-item .social-link::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 70%),
+    radial-gradient(ellipse at bottom right, rgba(0, 0, 0, 0.5), transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.social-item .social-link:hover::after {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+  top: -50%;
+  left: -50%;
+}
+
+/* Initial floating animation with staggered delays */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
   }
 
   50% {
-    transform: translateY(-10px) scale(1.05);
-    opacity: 0.95;
+    transform: translateY(-7px);
+  }
+}
+
+.social-item {
+  animation: float 3s ease-in-out infinite;
+}
+
+.social-item:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.social-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.social-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.social-item:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+.social-item:nth-child(5) {
+  animation-delay: 1.6s;
+}
+
+.social-item:nth-child(6) {
+  animation-delay: 2s;
+}
+
+.social-item:nth-child(7) {
+  animation-delay: 2.4s;
+}
+
+/* Interactive animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
   }
 
   100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
+    transform: scale(1);
   }
+}
+
+.social-item .social-link:active {
+  animation: pulse 0.3s ease-in-out;
+}
+
+/* Add this to your HTML to include a subtle entrance animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.social-list {
+  animation: fadeIn 1s ease forwards;
 }
 
 /*-----------------------------------*\
