@@ -1674,6 +1674,7 @@ main {
   margin-bottom: 30px;
   border: 1px solid var(--jet);
   overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .mapbox figure {
@@ -2811,6 +2812,10 @@ body.sunset-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #ffde82, #ff9966);
 }
 
+body.sunset-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.5);
+}
+
 body.sunset-theme .mapbox iframe {
   filter: sepia(0.3) saturate(1.4);
   box-shadow: 0 5px 15px rgba(97, 52, 26, 0.2);
@@ -3147,6 +3152,10 @@ body.oceanic-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #d4e5f1, #a5c7e0);
 }
 
+body.oceanic-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(0, 131, 238, 0.5);
+}
+
 body.oceanic-theme .mapbox iframe {
   filter: saturate(1.2) brightness(1);
   box-shadow: 0 4px 12px rgba(55, 92, 121, 0.15);
@@ -3431,6 +3440,10 @@ body.forest-theme .success-message {
 
 body.forest-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #c1e1d2, #7bb661);
+}
+
+body.forest-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(12, 152, 2, 0.5);
 }
 
 body.forest-theme .mapbox iframe {
@@ -3723,6 +3736,10 @@ body.lavender-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #e4d5f7, #b39ddb);
 }
 
+body.lavender-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(87, 3, 182, 0.5);
+}
+
 body.lavender-theme .mapbox iframe {
   filter: saturate(1.1) brightness(1);
   box-shadow: 0 4px 12px rgba(93, 71, 119, 0.15);
@@ -4009,6 +4026,10 @@ body.coffee-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #e0cda9, #8b5e3c);
 }
 
+body.coffee-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(207, 105, 2, 0.5);
+}
+
 body.coffee-theme .mapbox iframe {
   filter: saturate(1.2) brightness(1);
   box-shadow: 0 4px 12px rgba(75, 54, 33, 0.15);
@@ -4293,6 +4314,10 @@ body.aqua-theme .success-message {
 
 body.aqua-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #b2ebf2, #00acc1);
+}
+
+body.aqua-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(0, 185, 210, 0.5);
 }
 
 body.aqua-theme .mapbox iframe {
@@ -4586,6 +4611,10 @@ body.golden-hour-theme .success-message {
 
 body.golden-hour-theme .language-dropdown .option:hover:hover {
   background: linear-gradient(to left, #FF9800, #FFC107);
+}
+
+body.golden-hour-theme .mapbox {
+  box-shadow: 0px 4px 8px rgba(255, 157, 0, 0.5);
 }
 
 body.golden-hour-theme .mapbox iframe {
