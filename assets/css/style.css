@@ -1797,6 +1797,13 @@ textarea.form-input::-webkit-resizer {
   transition: transform 0.3s ease-in-out;
 }
 
+.quick-links {
+  display: flex;
+  margin-top: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
