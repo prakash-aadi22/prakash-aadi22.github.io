@@ -633,37 +633,37 @@ main {
 
 /* Individual color accents on hover */
 .social-item:nth-child(1) .social-link:hover {
-  color: #0077b5;
+  color: #0077b5 !important;
   /* LinkedIn */
 }
 
 .social-item:nth-child(2) .social-link:hover {
-  color: #6e5494;
+  color: #6e5494 !important;
   /* GitHub */
 }
 
 .social-item:nth-child(3) .social-link:hover {
-  color: #e4405f;
+  color: #e4405f !important;
   /* Instagram */
 }
 
 .social-item:nth-child(4) .social-link:hover {
-  color: #1DA1F2;
+  color: #1DA1F2 !important;
   /* Twitter/X */
 }
 
 .social-item:nth-child(5) .social-link:hover {
-  color: #1877f2;
+  color: #1877f2 !important;
   /* Facebook */
 }
 
 .social-item:nth-child(6) .social-link:hover {
-  color: #fffc00;
+  color: #fffc00 !important;
   /* Snapchat */
 }
 
 .social-item:nth-child(7) .social-link:hover {
-  color: #e60023;
+  color: #e60023 !important;
   /* Pinterest */
 }
 
@@ -3037,7 +3037,7 @@ body.sunset-theme .select-value {
 /* Oceanic Theme */
 
 body.oceanic-theme,
-body.oceanic-theme *,
+body.oceanic-theme *:not(ion-icon),
 body.oceanic-theme .form-input::placeholder {
   color: #2d4a63 !important;
 }
@@ -3319,7 +3319,7 @@ body.oceanic-theme .select-value {
 /* Forest Theme */
 
 body.forest-theme,
-body.forest-theme *,
+body.forest-theme *:not(ion-icon),
 body.forest-theme .form-input::placeholder {
   color: #2e4600 !important;
 }
@@ -3605,7 +3605,7 @@ body.forest-theme .select-value {
 /* Lavender Theme */
 
 body.lavender-theme,
-body.lavender-theme *,
+body.lavender-theme *:not(ion-icon),
 body.lavender-theme .form-input::placeholder {
   color: #5d4777 !important;
 }
@@ -3887,7 +3887,7 @@ body.lavender-theme .select-value {
 /* Coffee Theme */
 
 body.coffee-theme,
-body.coffee-theme *,
+body.coffee-theme *:not(ion-icon),
 body.coffee-theme .form-input::placeholder {
   color: #4b3621 !important;
 }
@@ -4169,7 +4169,7 @@ body.coffee-theme .select-value {
 /* Aqua Theme */
 
 body.aqua-theme,
-body.aqua-theme *,
+body.aqua-theme *:not(ion-icon),
 body.aqua-theme .form-input::placeholder {
   color: #004d40 !important;
 }
@@ -4447,7 +4447,7 @@ body.aqua-theme .select-value {
 /* Golden Hour Theme */
 
 body.golden-hour-theme,
-body.golden-hour-theme *,
+body.golden-hour-theme *:not(ion-icon),
 body.golden-hour-theme .form-input::placeholder {
   color: #5A3E1B !important;
 }
@@ -4457,7 +4457,7 @@ body.golden-hour-theme {
   color: #3D2800;
 }
 
-body.golden-hour-theme *:not(.icon):not([class*="gradient"]) {
+body.golden-hour-theme *:not(ion-icon):not(.icon):not([class*="gradient"]) {
   color: #3D2800;
 }
 
