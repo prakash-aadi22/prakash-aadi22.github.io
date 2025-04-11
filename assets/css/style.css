@@ -2553,7 +2553,9 @@ textarea.form-input::-webkit-resizer {
   align-items: center;
   gap: 5px;
   position: relative;
-  padding: 4px 8px;
+  padding: 6px 12px;
+  box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 50rem;
 }
 
 #selectedTheme {
@@ -2706,6 +2708,10 @@ body.sunset-theme .language-icon {
 
 body.sunset-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(255, 0, 0, 0.5);
+}
+
+body.sunset-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(255, 0, 0, 0.5);
 }
 
 body.sunset-theme .contact-link,
@@ -3051,6 +3057,10 @@ body.oceanic-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(0, 131, 238, 0.5);
 }
 
+body.oceanic-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(0, 131, 238, 0.5);
+}
+
 body.oceanic-theme .avatar-box,
 body.oceanic-theme .avatar-box:hover,
 body.oceanic-theme .avatar-box img:hover {
@@ -3331,6 +3341,10 @@ body.forest-theme {
 
 body.forest-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(12, 152, 2, 0.5);
+}
+
+body.forest-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(12, 152, 2, 0.5);
 }
 
 body.forest-theme .avatar-box,
@@ -3619,6 +3633,10 @@ body.lavender-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(87, 3, 182, 0.5);
 }
 
+body.lavender-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(87, 3, 182, 0.5);
+}
+
 body.lavender-theme .avatar-box,
 body.lavender-theme .avatar-box:hover,
 body.lavender-theme .avatar-box img:hover {
@@ -3899,6 +3917,10 @@ body.coffee-theme {
 
 body.coffee-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(207, 105, 2, 0.5);
+}
+
+body.coffee-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(207, 105, 2, 0.5);
 }
 
 body.coffee-theme .avatar-box,
@@ -4183,6 +4205,10 @@ body.aqua-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(0, 185, 210, 0.5);
 }
 
+body.aqua-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(0, 185, 210, 0.5);
+}
+
 body.aqua-theme .avatar-box,
 body.aqua-theme .avatar-box:hover,
 body.aqua-theme .avatar-box img:hover {
@@ -4463,6 +4489,10 @@ body.golden-hour-theme *:not(ion-icon):not(.icon):not([class*="gradient"]) {
 
 body.golden-hour-theme .language-icon {
   box-shadow: inset 0px 4px 8px rgba(255, 157, 0, 0.5);
+}
+
+body.golden-hour-theme .selected-theme {
+  box-shadow: inset 0px -4px 8px rgba(255, 157, 0, 0.5);
 }
 
 body.golden-hour-theme .form-input::placeholder {
