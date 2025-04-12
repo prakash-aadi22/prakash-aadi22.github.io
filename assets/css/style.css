@@ -2561,7 +2561,7 @@ textarea.form-input::-webkit-resizer {
   align-items: center;
   gap: 5px;
   position: relative;
-  padding: 6px 12px;
+  padding: 6px 15px;
   box-shadow: inset 0px -4px 8px rgba(0, 0, 0, 0.5);
   border-radius: 50rem;
 }
