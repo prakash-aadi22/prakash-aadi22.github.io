@@ -876,9 +876,9 @@ main {
   left: 0;
   z-index: 100;
   min-width: max-content;
-  width: 185px;
+  width: 200px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  max-height: 250px;
+  max-height: 300px;
   overflow-y: auto;
 }
 
@@ -906,6 +906,16 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.language-dropdown .option span {
+  margin-right: 1px;
+}
+
+.englishName {
+  color: #888 !important;
+  font-size: 0.9rem !important;
+  margin-right: 0 !important;
 }
 
 .language-dropdown .option:hover {
@@ -2409,6 +2419,10 @@ textarea.form-input::-webkit-resizer {
     left: 55%;
   }
 
+  .language-dropdown {
+    left: -32%;
+  }
+
   /**
    * REUSED STYLE
    */
@@ -2584,7 +2598,7 @@ body.light-theme .has-scrollbar::-webkit-scrollbar-track {
 }
 
 body.light-theme,
-body.light-theme *:not(ion-icon):not(.icon-box),
+body.light-theme *:not(ion-icon):not(.icon-box):not(.englishName),
 body.light-theme .form-input::placeholder {
   color: var(--eerie-black-1);
 }
@@ -2689,6 +2703,10 @@ body.light-theme .select-value {
 body.sunset-theme {
   background: linear-gradient(to bottom, #ffde82, #ff9966, #ff5e62);
   color: #5e2b19;
+}
+
+body.sunset-theme .optgroup-label {
+  color: rgb(208, 0, 0);
 }
 
 body.sunset-theme .avatar-box,
@@ -3055,7 +3073,7 @@ body.sunset-theme .select-value {
 /* Oceanic Theme */
 
 body.oceanic-theme,
-body.oceanic-theme *:not(ion-icon),
+body.oceanic-theme *:not(ion-icon):not(.englishName),
 body.oceanic-theme .form-input::placeholder {
   color: #2d4a63 !important;
 }
@@ -3345,7 +3363,7 @@ body.oceanic-theme .select-value {
 /* Forest Theme */
 
 body.forest-theme,
-body.forest-theme *:not(ion-icon),
+body.forest-theme *:not(ion-icon):not(.englishName),
 body.forest-theme .form-input::placeholder {
   color: #2e4600 !important;
 }
@@ -3639,7 +3657,7 @@ body.forest-theme .select-value {
 /* Lavender Theme */
 
 body.lavender-theme,
-body.lavender-theme *:not(ion-icon),
+body.lavender-theme *:not(ion-icon):not(.englishName),
 body.lavender-theme .form-input::placeholder {
   color: #5d4777 !important;
 }
@@ -3929,7 +3947,7 @@ body.lavender-theme .select-value {
 /* Coffee Theme */
 
 body.coffee-theme,
-body.coffee-theme *:not(ion-icon),
+body.coffee-theme *:not(ion-icon):not(.englishName),
 body.coffee-theme .form-input::placeholder {
   color: #4b3621 !important;
 }
@@ -4219,7 +4237,7 @@ body.coffee-theme .select-value {
 /* Aqua Theme */
 
 body.aqua-theme,
-body.aqua-theme *:not(ion-icon),
+body.aqua-theme *:not(ion-icon):not(.englishName),
 body.aqua-theme .form-input::placeholder {
   color: #004d40 !important;
 }
@@ -4505,7 +4523,7 @@ body.aqua-theme .select-value {
 /* Golden Hour Theme */
 
 body.golden-hour-theme,
-body.golden-hour-theme *:not(ion-icon),
+body.golden-hour-theme *:not(ion-icon):not(.englishName),
 body.golden-hour-theme .form-input::placeholder {
   color: #5A3E1B !important;
 }
