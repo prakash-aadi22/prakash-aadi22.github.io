@@ -609,9 +609,9 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
+  gap: 18px;
   padding-bottom: 4px;
-  padding-left: 7px;
+  padding-left: 2px;
 }
 
 .social-item .social-link {
