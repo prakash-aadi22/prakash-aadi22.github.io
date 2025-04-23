@@ -502,7 +502,7 @@ document.querySelectorAll("#languageSwitcher .option").forEach((option) => {
 
     // Show disclaimer message if not English
     if (currentLanguage !== "english") {
-      showDisclaimer("Please note: Translations are AI-generated and might contain inaccuracies.");
+      showDisclaimer("Please note: Translations contents are AI-generated and might contain inaccuracies.");
     } else {
       const disclaimer = document.getElementById("language-disclaimer");
       if (disclaimer) {
