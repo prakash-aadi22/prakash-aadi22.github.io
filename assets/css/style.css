@@ -422,6 +422,20 @@ article.active {
   border-radius: 3px;
 }
 
+header {
+  display: flex;
+}
+
+.aboutMeIntro {
+  margin-top: 10px;
+  margin-left: 13px;
+}
+
+.aboutMeIntro .audioIcon {
+  width: 30px;
+  height: 30px;
+}
+
 .has-scrollbar::-webkit-scrollbar {
   width: 5px;
   /* for vertical scrollbar */
@@ -2165,6 +2179,10 @@ textarea.form-input::-webkit-resizer {
 
   .form-btn ion-icon {
     font-size: 18px;
+  }
+
+  .aboutMeIntro {
+    margin-top: 18px;
   }
 }
 

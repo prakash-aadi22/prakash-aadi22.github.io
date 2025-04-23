@@ -471,6 +471,51 @@ function applyTranslations(translations) {
   typeEffect();
 }
 
+// aboutMeIntro <audio> from currentLanguage, shows it if the file loads, or hides it on error (404).
+function setIntroAudio() {
+  const introWrapper = document.querySelector('.audio-icon.aboutMeIntro');
+  if (!introWrapper) return;
+
+  const baseName = `${currentLanguage}-intro`;      // e.g. "french-intro"
+  const url = `./assets/audio/${baseName}.mp3`;
+  const audioEl = introWrapper.querySelector('audio.audioPlayer');
+
+  // clear any old handlers
+  audioEl.onloadedmetadata = null;
+  audioEl.onerror = null;
+
+  // if it loads metadata, it exists → show & wire up IDs
+  audioEl.onloadedmetadata = () => {
+    introWrapper.style.display = '';
+    introWrapper.dataset.audioId = baseName;
+    audioEl.dataset.audioId = baseName;
+  };
+
+  // if it errors (e.g. 404) → hide & clear src
+  audioEl.onerror = () => {
+    introWrapper.style.display = 'none';
+    audioEl.removeAttribute('src');
+  };
+
+  // trigger a metadata-only load
+  audioEl.preload = 'metadata';
+  audioEl.src = url;
+  audioEl.load();
+}
+
+function resetAllAudioIcons() {
+  // if one clip is mid-play, stop it
+  if (currentlyPlayingAudio) {
+    currentlyPlayingAudio.pause();
+    currentlyPlayingAudio.currentTime = 0;
+    currentlyPlayingAudio = null;
+  }
+  // force every little speaker back to the “static” icon
+  document.querySelectorAll(".audioIcon").forEach(img => {
+    img.src = "./assets/images/icons8-audio-100.png";
+  });
+}
+
 // Function to get the currently active page from the nav
 function getActivePageFromNav() {
   const activeLink = document.querySelector('.navbar-link.active');
@@ -497,6 +542,10 @@ document.querySelectorAll("#languageSwitcher .option").forEach((option) => {
     updateSelectedLanguageDisplay(currentLanguage);
     loadLanguage(currentLanguage); // Load and apply the new language
 
+    // intro <audio> updates immediately
+    setIntroAudio();
+    resetAllAudioIcons();   // ← pause & reset *all* icons back to the default
+
     // Close the dropdown after selection
     languageSwitcherDiv.classList.remove("active");
 
@@ -518,9 +567,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const languageSwitcher = document.getElementById('languageSwitcher');
   languageSwitcher.value = currentLanguage; // Sync the dropdown with localStorage
 
+  showActivePage(getActivePageFromNav()); // Show the active page
   updateSelectedLanguageDisplay(currentLanguage);
   loadLanguage(currentLanguage); // Load the language from localStorage or default
-  showActivePage(getActivePageFromNav()); // Show the active page
+  setIntroAudio();              // make sure intro is wired up on initial load!
+  resetAllAudioIcons();   // ← pause & reset *all* icons back to the default
 });
 
 // Language dropdown switcher logic 
