@@ -235,7 +235,7 @@ textarea {
   height: auto;
   width: 25px;
   position: relative;
-  top: -5px;
+  top: -9px;
 }
 
 .title-audio {
@@ -427,7 +427,7 @@ header {
 }
 
 .aboutMeIntro {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-left: 13px;
 }
 
@@ -2182,7 +2182,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .aboutMeIntro {
-    margin-top: 18px;
+    margin-top: 22px;
   }
 }
 
