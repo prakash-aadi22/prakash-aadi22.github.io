@@ -427,6 +427,8 @@ header {
 }
 
 .aboutMeIntro {
+  position: relative;
+  display: inline-block;
   margin-top: 12px;
   margin-left: 13px;
 }
@@ -434,6 +436,22 @@ header {
 .aboutMeIntro .audioIcon {
   width: 30px;
   height: 30px;
+}
+
+.aboutMeIntro:hover::after {
+  content: "Multilingual intro";
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  color: var(--orange-yellow-crayola);
+  background: var(--bg-gradient-yellow-2);
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .has-scrollbar::-webkit-scrollbar {
@@ -2675,6 +2693,7 @@ body.light-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.light-theme .aboutMeIntro:hover::after,
 body.light-theme .emailId:hover::after,
 body.light-theme .language-icon:hover::after,
 body.light-theme .language-dropdown,
@@ -2834,6 +2853,7 @@ body.sunset-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.sunset-theme .aboutMeIntro:hover::after,
 body.sunset-theme .info_more-btn::before,
 body.sunset-theme .info_more-btn,
 body.sunset-theme .emailId:hover::after,
@@ -3173,6 +3193,7 @@ body.oceanic-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.oceanic-theme .aboutMeIntro:hover::after,
 body.oceanic-theme .title,
 body.oceanic-theme .info_more-btn::before,
 body.oceanic-theme .info_more-btn,
@@ -3463,6 +3484,7 @@ body.forest-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.forest-theme .aboutMeIntro:hover::after,
 body.forest-theme .title,
 body.forest-theme .info_more-btn::before,
 body.forest-theme .info_more-btn,
@@ -3757,6 +3779,7 @@ body.lavender-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.lavender-theme .aboutMeIntro:hover::after,
 body.lavender-theme .title,
 body.lavender-theme .info_more-btn::before,
 body.lavender-theme .info_more-btn,
@@ -4047,6 +4070,7 @@ body.coffee-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.coffee-theme .aboutMeIntro:hover::after,
 body.coffee-theme .title,
 body.coffee-theme .info_more-btn::before,
 body.coffee-theme .info_more-btn,
@@ -4337,6 +4361,7 @@ body.aqua-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.aqua-theme .aboutMeIntro:hover::after,
 body.aqua-theme .title,
 body.aqua-theme .info_more-btn::before,
 body.aqua-theme .info_more-btn,
@@ -4633,6 +4658,7 @@ body.golden-hour-theme .navbar-link.active::after {
   border-radius: 2px;
 }
 
+body.golden-hour-theme .aboutMeIntro:hover::after,
 body.golden-hour-theme .title,
 body.golden-hour-theme .info_more-btn::before,
 body.golden-hour-theme .info_more-btn,
