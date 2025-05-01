@@ -280,13 +280,13 @@ audioIcons.forEach((icon) => {
   });
 
   audioPlayer.addEventListener("pause", () => {
-    audioIconImage.src = "./assets/images/icons8-audio-100.png"; // Revert back when paused
+    audioIconImage.src = "./assets/images/audio-icon.png"; // Revert back when paused
   });
 
   // Stop tracking if audio ends
   audioPlayer.addEventListener("ended", () => {
     currentlyPlayingAudio = null; // Clear the currently playing audio when it ends
-    audioIconImage.src = "./assets/images/icons8-audio-100.png"; // Reset icon when audio ends
+    audioIconImage.src = "./assets/images/audio-icon.png"; // Reset icon when audio ends
   });
 });
 
@@ -304,7 +304,7 @@ navbarLinks.forEach((link) => {
       // Reset the icon to default
       const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
       if (audioIconImage) {
-        audioIconImage.src = "./assets/images/icons8-audio-100.png";
+        audioIconImage.src = "./assets/images/audio-icon.png";
       }
 
       // Clear the currently playing audio
@@ -324,7 +324,7 @@ testimonials.forEach((link) => {
       // Reset the icon to default
       const audioIconImage = document.querySelector(`img[data-audio-id="${currentlyPlayingAudio.getAttribute("data-audio-id")}"]`);
       if (audioIconImage) {
-        audioIconImage.src = "./assets/images/icons8-audio-100.png";
+        audioIconImage.src = "./assets/images/audio-icon.png";
       }
 
       // Clear the currently playing audio
@@ -512,7 +512,7 @@ function resetAllAudioIcons() {
   }
   // force every little speaker back to the “static” icon
   document.querySelectorAll(".audioIcon").forEach(img => {
-    img.src = "./assets/images/icons8-audio-100.png";
+    img.src = "./assets/images/audio-icon.png";
   });
 }
 
