@@ -680,7 +680,10 @@ main {
 }
 
 .social-item:nth-child(4) .social-link:hover {
-  color: #1DA1F2 !important;
+  /* color: #1DA1F2 !important; */
+  /* Twitter */
+  color: #000000 !important;
+  /* X */
   /* Twitter/X */
 }
 
