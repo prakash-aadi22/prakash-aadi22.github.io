@@ -251,6 +251,33 @@ const audioIcons = document.querySelectorAll(".audioIcon");
 // Variable to track the currently playing audio
 let currentlyPlayingAudio = null;
 
+// Background music
+const musciToggle = document.querySelector('.music-toggle');
+
+let backgroundMusic = new Audio();
+backgroundMusic.src = "./assets/music/background-music.mp3";
+backgroundMusic.loop = true;
+
+let wasBackgroundPlaying = false;
+
+musciToggle.addEventListener('click', () => {
+  const isOn = musciToggle.classList.toggle('active');
+  if (isOn) {
+    backgroundMusic.play();
+  } else {
+    backgroundMusic.pause();
+  }
+});
+
+['mouseenter', 'mouseleave'].forEach(evt =>
+  musciToggle.addEventListener(evt, () => {
+    if (musciToggle.classList.contains('active')) {
+      document.querySelectorAll('.eq-bar')
+        .forEach(bar => bar.style.transition = 'height 0.2s ease');
+    }
+  })
+);
+
 // Add event listeners to each icon
 audioIcons.forEach((icon) => {
   const audioId = icon.closest(".audio-icon").getAttribute("data-audio-id"); // Get the unique audio ID from the closest parent
@@ -268,9 +295,23 @@ audioIcons.forEach((icon) => {
     if (audioPlayer.paused) {
       audioPlayer.play();
       currentlyPlayingAudio = audioPlayer; // Update the currently playing audio
+
+      // pause the background track if it’s on
+      if (!backgroundMusic.paused) {
+        backgroundMusic.pause();
+        wasBackgroundPlaying = true;
+        musciToggle.classList.remove("active");
+      }
     } else {
       audioPlayer.pause();
       currentlyPlayingAudio = null; // Clear the currently playing audio
+
+      // on manual pause, restore BG if needed
+      if (wasBackgroundPlaying) {
+        backgroundMusic.play();
+        wasBackgroundPlaying = false;
+        musciToggle.classList.add("active");
+      }
     }
   });
 
@@ -287,6 +328,13 @@ audioIcons.forEach((icon) => {
   audioPlayer.addEventListener("ended", () => {
     currentlyPlayingAudio = null; // Clear the currently playing audio when it ends
     audioIconImage.src = "./assets/images/audio-icon.png"; // Reset icon when audio ends
+
+    // play the background track
+    if (wasBackgroundPlaying) {
+      backgroundMusic.play();
+      wasBackgroundPlaying = false;
+      musciToggle.classList.add("active");
+    }
   });
 });
 
@@ -682,7 +730,7 @@ function disableTransitionDuringThemeChange() {
 }
 
 // On page load, apply the saved theme or default to dark-theme
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   const validThemes = [
     "dark-theme",
     "light-theme",
