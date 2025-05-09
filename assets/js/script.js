@@ -674,7 +674,8 @@ document.addEventListener("click", function () {
 function selectTheme(theme) {
   const body = document.body;
   const themeIcon = document.querySelector(".theme-box ion-icon");
-  const selectedThemeText = document.getElementById("selectedTheme");
+  const themeIconImg = document.querySelector(".theme-icons-img");
+  const themeNameSpan = document.querySelector(".theme-name");
 
   // Possible icons for each theme
   const themeIcons = {
@@ -687,6 +688,18 @@ function selectTheme(theme) {
     "coffee-theme": "cafe-outline",
     "aqua-theme": "water-outline",
     "golden-hour-theme": "contrast-outline",
+  };
+
+  const themeIconsImg = {
+    "dark-theme": "./assets/theme/dark-theme.png",
+    "light-theme": "./assets/theme/light-theme.png",
+    "oceanic-theme": "./assets/theme/oceanic-theme.png",
+    "sunset-theme": "./assets/theme/sunset-theme.png",
+    "lavender-theme": "./assets/theme/lavender-theme.png",
+    "forest-theme": "./assets/theme/forest-theme.png",
+    "coffee-theme": "./assets/theme/coffee-theme.png",
+    "aqua-theme": "./assets/theme/aqua-theme.png",
+    "golden-hour-theme": "./assets/theme/golden-hour-theme.png",
   };
 
   // Theme translations (Modify these according to your language setup)
@@ -708,8 +721,9 @@ function selectTheme(theme) {
 
   // Update icon and text
   themeIcon.setAttribute("name", themeIcons[theme]);
-  selectedThemeText.textContent = themeTranslations[theme]; // Change text
-  selectedThemeText.setAttribute("data-translate", themeTranslations[theme]); // Change data-translate
+  themeIconImg.setAttribute("src", themeIconsImg[theme]);
+  themeNameSpan.textContent = themeTranslations[theme]; // Change text
+  themeNameSpan.setAttribute("data-translate", themeTranslations[theme]); // Change data-translate
 
   // Save theme preference
   localStorage.setItem("theme", theme);
@@ -757,7 +771,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update icon and text
   const themeIcon = document.querySelector(".theme-box ion-icon");
-  const selectedThemeText = document.getElementById("selectedTheme");
+  const themeIconImg = document.querySelector(".theme-icons-img");
+  const themeNameSpan = document.querySelector(".theme-name");
 
   const themeIcons = {
     "dark-theme": "moon-outline",
@@ -769,6 +784,18 @@ document.addEventListener('DOMContentLoaded', () => {
     "coffee-theme": "cafe-outline",
     "aqua-theme": "water-outline",
     "golden-hour-theme": "contrast-outline",
+  };
+
+  const themeIconsImg = {
+    "dark-theme": "./assets/theme/dark-theme.png",
+    "light-theme": "./assets/theme/light-theme.png",
+    "oceanic-theme": "./assets/theme/oceanic-theme.png",
+    "sunset-theme": "./assets/theme/sunset-theme.png",
+    "lavender-theme": "./assets/theme/lavender-theme.png",
+    "forest-theme": "./assets/theme/forest-theme.png",
+    "coffee-theme": "./assets/theme/coffee-theme.png",
+    "aqua-theme": "./assets/theme/aqua-theme.png",
+    "golden-hour-theme": "./assets/theme/golden-hour-theme.png",
   };
 
   const themeTranslations = {
@@ -784,8 +811,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   themeIcon.setAttribute("name", themeIcons[savedTheme]);
-  selectedThemeText.textContent = themeTranslations[savedTheme];
-  selectedThemeText.setAttribute("data-translate", themeTranslations[savedTheme]); // Change data-translate
+  themeIconImg.setAttribute("src", themeIconsImg[savedTheme]);
+  themeNameSpan.textContent = themeTranslations[savedTheme];
+  themeNameSpan.setAttribute("data-translate", themeTranslations[savedTheme]);
 
   // Change Language
   let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
