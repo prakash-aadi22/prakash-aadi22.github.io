@@ -2591,6 +2591,8 @@ textarea.form-input::-webkit-resizer {
   max-height: 200px;
   overflow-y: auto;
   backdrop-filter: blur(5px);
+  min-width: max-content;
+  width: 155px;
 }
 
 .theme-dropdown.open {
@@ -2626,6 +2628,10 @@ textarea.form-input::-webkit-resizer {
   color: #ffda90;
   font-size: 14px;
   margin: 0;
+}
+
+.theme-icons-img {
+  width: 30px;
 }
 
 
