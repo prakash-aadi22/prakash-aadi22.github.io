@@ -792,7 +792,7 @@ main {
   animation: pulse 0.3s ease-in-out;
 }
 
-/* Add this to your HTML to include a subtle entrance animation */
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
