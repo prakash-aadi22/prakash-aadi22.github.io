@@ -226,5 +226,10 @@
     "World Languages": "World Languages",
     "Indian Languages": "Indian Languages",
     "French": "French",
-    "Angular": "Angular"
+    "Angular": "Angular",
+    "Android": "Android",
+    "iOS": "iOS",
+    "Apple Keynote": "Apple Keynote",
+    "Apple Numbers": "Apple Numbers",
+    "Apple Pages": "Apple Pages"
 }

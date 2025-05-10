@@ -226,5 +226,10 @@
     "World Languages": "世界语言",
     "Indian Languages": "印度语言",
     "French": "法语",
-    "Angular": "Angular"
+    "Angular": "Angular",
+    "Android": "安卓",
+    "iOS": "苹果系统",
+    "Apple Keynote": "苹果Keynote",
+    "Apple Numbers": "苹果Numbers",
+    "Apple Pages": "苹果Pages"
 }

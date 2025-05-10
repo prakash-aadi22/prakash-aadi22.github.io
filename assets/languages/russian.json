@@ -226,5 +226,10 @@
     "World Languages": "Мировые языки",
     "Indian Languages": "Индийские языки",
     "French": "Французский",
-    "Angular": "Ангуляр"
+    "Angular": "Ангуляр",
+    "Android": "Андроид",
+    "iOS": "АйОС",
+    "Apple Keynote": "Эппл Киноут",
+    "Apple Numbers": "Эппл Намберс",
+    "Apple Pages": "Эппл Пейджес"
 }
