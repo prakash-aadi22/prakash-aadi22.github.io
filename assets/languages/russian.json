@@ -235,5 +235,6 @@
     "Docker": "Докер",
     "GitLab": "ГитЛаб",
     "Azure": "Ажур",
-    "Google Cloud": "Гугл Клауд"
+    "Google Cloud": "Гугл Клауд",
+    "Jenkins": "Дженкинс"
 }

@@ -235,5 +235,6 @@
     "Docker": "Docker",
     "GitLab": "GitLab",
     "Azure": "Azure",
-    "Google Cloud": "谷歌云"
+    "Google Cloud": "谷歌云",
+    "Jenkins": "詹金斯"
 }
