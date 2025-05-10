@@ -82,7 +82,6 @@
     "Python": "Python",
     "Data Structure": "データ構造",
     "Algorithm": "アルゴリズム",
-    "Frameworks/Systems/Tools": "フレームワーク / システム / ツール",
     "IntelliJ IDEA": "IntelliJ IDEA",
     "PyCharm": "PyCharm",
     "Visual Studio Code": "Visual Studio Code",
@@ -231,5 +230,10 @@
     "iOS": "アイオーエス",
     "Apple Keynote": "アップル キーノート",
     "Apple Numbers": "アップル ナンバーズ",
-    "Apple Pages": "アップル ページズ"
+    "Apple Pages": "アップル ページズ",
+    "Frameworks/Systems/Tools/Platforms": "フレームワーク/システム/ツール/プラットフォーム",
+    "Docker": "ドッカー",
+    "GitLab": "ギットラボ",
+    "Azure": "アジュール",
+    "Google Cloud": "グーグルクラウド"
 }

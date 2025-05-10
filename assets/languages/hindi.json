@@ -82,7 +82,6 @@
     "Python": "पाइथन",
     "Data Structure": "डेटा संरचना",
     "Algorithm": "एल्गोरिदम",
-    "Frameworks/Systems/Tools": "फ्रेमवर्क/सिस्टम/उपकरण",
     "IntelliJ IDEA": "इंटेलीज आईडिया",
     "PyCharm": "पायचर्म",
     "Visual Studio Code": "विज़ुअल स्टूडियो कोड",
@@ -241,5 +240,10 @@
     "iOS": "आईओएस",
     "Apple Keynote": "एप्पल कीनोट",
     "Apple Numbers": "एप्पल नंबर्स",
-    "Apple Pages": "एप्पल पेजेस"
+    "Apple Pages": "एप्पल पेजेस",
+    "Frameworks/Systems/Tools/Platforms": "फ़्रेमवर्क्स/सिस्टम्स/टूल्स/प्लैटफॉर्म्स",
+    "Docker": "डॉकर",
+    "GitLab": "गिटलैब",
+    "Azure": "एज्योर",
+    "Google Cloud": "गूगल क्लाउड"
 }

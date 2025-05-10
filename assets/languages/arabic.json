@@ -82,7 +82,6 @@
     "Python": "بايثون",
     "Data Structure": "هياكل البيانات",
     "Algorithm": "خوارزمية",
-    "Frameworks/Systems/Tools": "الأطر/الأنظمة/الأدوات",
     "IntelliJ IDEA": "IntelliJ IDEA",
     "PyCharm": "PyCharm",
     "Visual Studio Code": "Visual Studio Code",
@@ -231,5 +230,10 @@
     "iOS": "آي أو إس",
     "Apple Keynote": "آبل كينوت",
     "Apple Numbers": "آبل نمبرز",
-    "Apple Pages": "آبل بيجز"
+    "Apple Pages": "آبل بيجز",
+    "Frameworks/Systems/Tools/Platforms": "أطر / أنظمة / أدوات / منصات",
+    "Docker": "دوكر",
+    "GitLab": "جيتلاب",
+    "Azure": "أزور",
+    "Google Cloud": "جوجل كلاود"
 }

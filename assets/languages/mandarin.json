@@ -82,7 +82,6 @@
     "Python": "Python",
     "Data Structure": "数据结构",
     "Algorithm": "算法",
-    "Frameworks/Systems/Tools": "框架/系统/工具",
     "IntelliJ IDEA": "IntelliJ IDEA",
     "PyCharm": "PyCharm",
     "Visual Studio Code": "Visual Studio Code",
@@ -231,5 +230,10 @@
     "iOS": "苹果系统",
     "Apple Keynote": "苹果Keynote",
     "Apple Numbers": "苹果Numbers",
-    "Apple Pages": "苹果Pages"
+    "Apple Pages": "苹果Pages",
+    "Frameworks/Systems/Tools/Platforms": "框架/系统/工具/平台",
+    "Docker": "Docker",
+    "GitLab": "GitLab",
+    "Azure": "Azure",
+    "Google Cloud": "谷歌云"
 }

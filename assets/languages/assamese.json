@@ -82,7 +82,6 @@
     "Python": "পাইথন",
     "Data Structure": "ডাটা সঁৰচনা",
     "Algorithm": "এলগৰিদম",
-    "Frameworks/Systems/Tools": "ফ্ৰেমৱাৰ্ক/চিষ্টেম/টুলছ",
     "IntelliJ IDEA": "IntelliJ IDEA",
     "PyCharm": "PyCharm",
     "Visual Studio Code": "Visual Studio Code",
@@ -231,5 +230,10 @@
     "iOS": "আইঅ’এছ",
     "Apple Keynote": "এপল কীনোট",
     "Apple Numbers": "এপল নম্বৰছ",
-    "Apple Pages": "এপল পেইজছ"
+    "Apple Pages": "এপল পেইজছ",
+    "Frameworks/Systems/Tools/Platforms": "ফ্ৰেমৱৰ্কছ/চিস্টেমছ/টুলছ/প্লাটফৰ্মছ",
+    "Docker": "ডকাৰ",
+    "GitLab": "গিটল্যাব",
+    "Azure": "এজুৰ",
+    "Google Cloud": "গুগল ক্লাউড"
 }

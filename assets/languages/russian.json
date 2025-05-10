@@ -82,7 +82,6 @@
     "Python": "Python",
     "Data Structure": "Структура данных",
     "Algorithm": "Алгоритм",
-    "Frameworks/Systems/Tools": "Фреймворки/Системы/Инструменты",
     "IntelliJ IDEA": "IntelliJ IDEA",
     "PyCharm": "PyCharm",
     "Visual Studio Code": "Visual Studio Code",
@@ -231,5 +230,10 @@
     "iOS": "АйОС",
     "Apple Keynote": "Эппл Киноут",
     "Apple Numbers": "Эппл Намберс",
-    "Apple Pages": "Эппл Пейджес"
+    "Apple Pages": "Эппл Пейджес",
+    "Frameworks/Systems/Tools/Platforms": "Фреймворки/Системы/Инструменты/Платформы",
+    "Docker": "Докер",
+    "GitLab": "ГитЛаб",
+    "Azure": "Ажур",
+    "Google Cloud": "Гугл Клауд"
 }
