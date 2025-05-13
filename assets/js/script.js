@@ -258,6 +258,43 @@ let backgroundMusic = new Audio();
 backgroundMusic.src = "./assets/music/background-music.mp3";
 backgroundMusic.loop = true;
 
+// const validThemes = [
+//   "dark-theme",
+//   "light-theme",
+//   "oceanic-theme",
+//   "sunset-theme",
+//   "lavender-theme",
+//   "forest-theme",
+//   "coffee-theme",
+//   "aqua-theme",
+//   "golden-hour-theme"
+// ];
+
+// // Mapping each theme to a specific music file
+// const themeMusicMap = {
+//   "dark-theme": "./assets/music/background-music.mp3",
+//   "light-theme": "./assets/music/background-music.mp3",
+//   "oceanic-theme": "./assets/music/background-music.mp3",
+//   "sunset-theme": "./assets/music/lo-fi-chill-saxophone.mp3",
+//   "lavender-theme": "./assets/music/background-music.mp3",
+//   "forest-theme": "./assets/music/background-music.mp3",
+//   "coffee-theme": "./assets/music/background-music.mp3",
+//   "aqua-theme": "./assets/music/background-music.mp3",
+//   "golden-hour-theme": "./assets/music/background-music.mp3"
+// };
+
+// // Get selected theme from localStorage
+// const selectedTheme = localStorage.getItem("theme");
+
+// // Check if the selected theme is valid and update the music source
+// if (validThemes.includes(selectedTheme)) {
+//   backgroundMusic.src = themeMusicMap[selectedTheme];
+// } else {
+//   // Fallback music
+//   backgroundMusic.src = "./assets/music/background-music.mp3";
+// }
+
+
 let wasBackgroundPlaying = false;
 
 musciToggle.addEventListener('click', () => {
