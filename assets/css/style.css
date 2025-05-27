@@ -1371,10 +1371,9 @@ main {
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
   gap: 1rem;
   padding: 20px;
-
 }
 
 .skills-item {
