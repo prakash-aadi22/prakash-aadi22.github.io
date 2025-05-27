@@ -238,5 +238,12 @@
     "Google Cloud": "구글 클라우드",
     "Jenkins": "젠킨스",
     "Spotify": "스포티파이",
-    "Threads": "스레드"
+    "Threads": "스레드",
+    "Microsoft Copilot": "마이크로소프트 코파일럿",
+    "GitHub Copilot": "깃허브 코파일럿",
+    "Claude": "클로드",
+    "Google Gemini": "구글 제미니",
+    "Grok": "그록",
+    "BLACKBOX.AI": "블랙박스.AI",
+    "DeepSeek": "딥시크"
 }

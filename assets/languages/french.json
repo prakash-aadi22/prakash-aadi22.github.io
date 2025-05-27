@@ -238,5 +238,12 @@
   "Google Cloud": "Google Cloud",
   "Jenkins": "Jenkins",
   "Spotify": "Spotify",
-  "Threads": "Threads"
+  "Threads": "Threads",
+  "Microsoft Copilot": "Microsoft Copilot",
+  "GitHub Copilot": "GitHub Copilot",
+  "Claude": "Claude",
+  "Google Gemini": "Google Gemini",
+  "Grok": "Grok",
+  "BLACKBOX.AI": "BLACKBOX.AI",
+  "DeepSeek": "DeepSeek"
 }

@@ -238,5 +238,12 @@
     "Google Cloud": "谷歌云",
     "Jenkins": "詹金斯",
     "Spotify": "斯波蒂法",
-    "Threads": "线程"
+    "Threads": "线程",
+    "Microsoft Copilot": "微软副驾驶",
+    "GitHub Copilot": "GitHub副驾驶",
+    "Claude": "克劳德",
+    "Google Gemini": "谷歌双子座",
+    "Grok": "格罗克",
+    "BLACKBOX.AI": "黑匣子.AI",
+    "DeepSeek": "深度探索"
 }

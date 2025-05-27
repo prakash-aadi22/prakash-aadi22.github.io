@@ -238,5 +238,12 @@
     "Google Cloud": "Гугл Клауд",
     "Jenkins": "Дженкинс",
     "Spotify": "Спотифай",
-    "Threads": "Тредс"
+    "Threads": "Тредс",
+    "Microsoft Copilot": "Майкрософт Копайлот",
+    "GitHub Copilot": "ГитХаб Копайлот",
+    "Claude": "Клод",
+    "Google Gemini": "Гугл Джемини",
+    "Grok": "Грок",
+    "BLACKBOX.AI": "Блэкбокс.АИ",
+    "DeepSeek": "ДипСик"
 }
