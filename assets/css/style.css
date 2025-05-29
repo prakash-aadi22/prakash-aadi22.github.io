@@ -117,6 +117,7 @@ body {
 }
 
 #language-disclaimer {
+  min-width: 260px;
   cursor: url("../images/natural-user-interface-2-25.png"), auto !important;
   position: fixed;
   bottom: 20px;
