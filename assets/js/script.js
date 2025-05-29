@@ -479,6 +479,7 @@ const validLanguage = [
   "japanese",
   "korean",
   "vietnamese",
+  "bangladeshi",
 ];
 
 let currentLanguage = localStorage.getItem("currentLanguage");
@@ -530,7 +531,7 @@ const countryLanguageMap = {
   "Spain": "spanish",
   "Italy": "italian",
   "Russia": "russian",
-  "Bangladesh": "bengali",
+  "Bangladesh": "bangladeshi",
   "China": "mandarin",
   "Saudi Arabia": "arabic",
   "Portugal": "portuguese",
