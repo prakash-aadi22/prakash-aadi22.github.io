@@ -484,6 +484,7 @@ const validLanguage = [
   "ladakhi",
   "manipuri",
   "mizo",
+  "urdu",
 ];
 
 let currentLanguage = localStorage.getItem("currentLanguage");
@@ -582,9 +583,9 @@ const regionLanguageMap = {
   "Chandigarh": "hindi",
   "Dadra and Nagar Haveli and Daman and Diu": "gujarati",
   "Delhi": "hindi",
-  "Jammu and Kashmir": "hindi", // urdu
-  "Jammu": "hindi", // urdu
-  "Kashmir": "hindi", // urdu
+  "Jammu and Kashmir": "urdu",
+  "Jammu": "urdu",
+  "Kashmir": "urdu",
   "Ladakh": "ladakhi",
   "Lakshadweep": "malayalam",
   "Puducherry": "tamil"
