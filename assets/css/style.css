@@ -241,6 +241,7 @@ textarea {
 
 .title-audio {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 8px;
 }
@@ -2212,6 +2213,10 @@ textarea.form-input::-webkit-resizer {
   .aboutMeIntro {
     margin-top: 22px;
   }
+
+  .title-audio {
+    justify-content: start;
+  }
 }
 
 /**
@@ -2317,6 +2322,10 @@ textarea.form-input::-webkit-resizer {
   .form-btn {
     width: max-content;
     margin-left: auto;
+  }
+
+  .title-audio {
+    justify-content: start;
   }
 }
 
@@ -2425,6 +2434,10 @@ textarea.form-input::-webkit-resizer {
 
   .project-banner-box {
     height: 230px;
+  }
+
+  .title-audio {
+    justify-content: start;
   }
 }
 
@@ -2581,6 +2594,10 @@ textarea.form-input::-webkit-resizer {
     top: 100%;
     height: max-content;
     margin-top: 5px;
+  }
+
+  .title-audio {
+    justify-content: start;
   }
 }
 
