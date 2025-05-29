@@ -480,6 +480,10 @@ const validLanguage = [
   "korean",
   "vietnamese",
   "bangladeshi",
+  "konkani",
+  "ladakhi",
+  "manipuri",
+  "mizo",
 ];
 
 let currentLanguage = localStorage.getItem("currentLanguage");
@@ -549,7 +553,7 @@ const regionLanguageMap = {
   "Assam": "assamese",
   "Bihar": "hindi",
   "Chhattisgarh": "hindi",
-  "Goa": "hindi", // konkani
+  "Goa": "konkani",
   "Gujarat": "gujarati",
   "Haryana": "hindi",
   "Himachal Pradesh": "hindi",
@@ -558,9 +562,9 @@ const regionLanguageMap = {
   "Kerala": "malayalam",
   "Madhya Pradesh": "hindi",
   "Maharashtra": "marathi",
-  "Manipur": "hindi", // manipuri
+  "Manipur": "manipuri",
   "Meghalaya": "hindi",
-  "Mizoram": "hindi", // mizo
+  "Mizoram": "mizo",
   "Nagaland": "hindi",
   "Odisha": "odia",
   "Punjab": "punjabi",
@@ -581,7 +585,7 @@ const regionLanguageMap = {
   "Jammu and Kashmir": "hindi", // urdu
   "Jammu": "hindi", // urdu
   "Kashmir": "hindi", // urdu
-  "Ladakh": "hindi", // ladakhi
+  "Ladakh": "ladakhi",
   "Lakshadweep": "malayalam",
   "Puducherry": "tamil"
 };
