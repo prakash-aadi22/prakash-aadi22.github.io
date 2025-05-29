@@ -548,7 +548,7 @@ const regionLanguageMap = {
   "Assam": "assamese",
   "Bihar": "hindi",
   "Chhattisgarh": "hindi",
-  "Goa": "marathi",
+  "Goa": "hindi",
   "Gujarat": "gujarati",
   "Haryana": "hindi",
   "Himachal Pradesh": "hindi",
@@ -571,6 +571,15 @@ const regionLanguageMap = {
   "Uttar Pradesh": "hindi",
   "Uttarakhand": "hindi",
   "West Bengal": "bengali",
+  "Andaman and Nicobar Islands": "hindi",
+  "Delhi": "hindi",
+  "Jammu and Kashmir": "hindi",
+  "Jammu": "hindi",
+  "Kashmir": "hindi",
+  "Ladakh": "hindi",
+  "Lakshadweep": "hindi",
+  "Lakshadweep": "hindi",
+  "Puducherry": "hindi",
 };
 
 fetch('https://freeipapi.com/api/json')
@@ -585,7 +594,7 @@ fetch('https://freeipapi.com/api/json')
       // Try region-specific, else fallback to Hindi
       detectedLanguage = regionLanguageMap[region] || "hindi";
     } else {
-      detectedLanguage = countryLanguageMap[country];
+      detectedLanguage = countryLanguageMap[country] || "english";
     }
 
     // If we got a valid language, apply it
