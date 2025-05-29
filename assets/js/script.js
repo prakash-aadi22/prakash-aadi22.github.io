@@ -522,6 +522,96 @@ function loadLanguage(language) {
     .catch(error => console.error('Error loading language file!'));
 }
 
+// Map country -> default language
+const countryLanguageMap = {
+  "United States": "english",
+  "United Kingdom": "english",
+  "France": "french",
+  "Spain": "spanish",
+  "Italy": "italian",
+  "Russia": "russian",
+  "Bangladesh": "bengali",
+  "China": "mandarin",
+  "Saudi Arabia": "arabic",
+  "Portugal": "portuguese",
+  "Germany": "german",
+  "Japan": "japanese",
+  "South Korea": "korean",
+  "Vietnam": "vietnamese"
+};
+
+// Map Indian region/state -> language
+const regionLanguageMap = {
+  "Andhra Pradesh": "telugu",
+  "Arunachal Pradesh": "hindi",
+  "Assam": "assamese",
+  "Bihar": "hindi",
+  "Chhattisgarh": "hindi",
+  "Goa": "marathi",
+  "Gujarat": "gujarati",
+  "Haryana": "hindi",
+  "Himachal Pradesh": "hindi",
+  "Jharkhand": "hindi",
+  "Karnataka": "kannada",
+  "Kerala": "malayalam",
+  "Madhya Pradesh": "hindi",
+  "Maharashtra": "marathi",
+  "Manipur": "hindi",
+  "Meghalaya": "hindi",
+  "Mizoram": "hindi",
+  "Nagaland": "hindi",
+  "Odisha": "odia",
+  "Punjab": "punjabi",
+  "Rajasthan": "hindi",
+  "Sikkim": "hindi",
+  "Tamil Nadu": "tamil",
+  "Telangana": "telugu",
+  "Tripura": "bengali",
+  "Uttar Pradesh": "hindi",
+  "Uttarakhand": "hindi",
+  "West Bengal": "bengali",
+};
+
+fetch('https://freeipapi.com/api/json')
+  .then(response => response.json())
+  .then(data => {
+    const country = data.countryName;
+    const region = data.regionName;
+
+    let detectedLanguage;
+
+    if (country === "India") {
+      // Try region-specific, else fallback to Hindi
+      detectedLanguage = regionLanguageMap[region] || "hindi";
+    } else {
+      detectedLanguage = countryLanguageMap[country];
+    }
+
+    // If we got a valid language, apply it
+    if (validLanguage.includes(detectedLanguage)) {
+      localStorage.setItem("currentLanguage", detectedLanguage);
+      updateSelectedLanguageDisplay(detectedLanguage);
+      loadLanguage(detectedLanguage);
+
+      // Show disclaimer message if not English
+      if (detectedLanguage !== "english") {
+        showDisclaimer("Please note: Translations contents are AI-generated and might contain inaccuracies.");
+      } else {
+        const disclaimer = document.getElementById("language-disclaimer");
+        if (disclaimer) {
+          disclaimer.remove();
+        }
+      }
+    } else {
+      // No mapping found — keep whatever's in localStorage (or your default)
+      console.log(`Currently language not available for ${country}${country === "India" ? " / " + region : ""}.`);
+    }
+
+  })
+  .catch(error => {
+    console.error('Error fetching IP info:', error);
+  });
+
 // Function to apply translations
 function applyTranslations(translations) {
   document.querySelectorAll('[data-translate]').forEach(element => {
@@ -558,10 +648,35 @@ function applyTranslations(translations) {
   typeEffect();
 }
 
+// valid intro language
+const languagesWithIntroAudio = [
+  "arabic",
+  "english",
+  "french",
+  "german",
+  "hindi",
+  "italian",
+  "japanese",
+  "mandarin",
+  "portuguese",
+  "russian",
+  "spanish",
+];
+
 // aboutMeIntro <audio> from currentLanguage, shows it if the file loads, or hides it on error (404).
 function setIntroAudio() {
   const introWrapper = document.querySelector('.audio-icon.aboutMeIntro');
   if (!introWrapper) return;
+
+  // if this language has no intro-audio file, hide and exit
+  if (!languagesWithIntroAudio.includes(currentLanguage)) {
+    introWrapper.style.display = 'none';
+    const audioEl = introWrapper.querySelector('audio.audioPlayer');
+    if (audioEl) {
+      audioEl.removeAttribute('src');
+    }
+    return;
+  }
 
   const baseName = `${currentLanguage}-intro`;      // e.g. "french-intro"
   const url = `./assets/audio/${baseName}.mp3`;
