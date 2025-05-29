@@ -543,12 +543,13 @@ const countryLanguageMap = {
 
 // Map Indian region/state -> language
 const regionLanguageMap = {
+  // States
   "Andhra Pradesh": "telugu",
   "Arunachal Pradesh": "hindi",
   "Assam": "assamese",
   "Bihar": "hindi",
   "Chhattisgarh": "hindi",
-  "Goa": "hindi",
+  "Goa": "hindi", // konkani
   "Gujarat": "gujarati",
   "Haryana": "hindi",
   "Himachal Pradesh": "hindi",
@@ -557,9 +558,9 @@ const regionLanguageMap = {
   "Kerala": "malayalam",
   "Madhya Pradesh": "hindi",
   "Maharashtra": "marathi",
-  "Manipur": "hindi",
+  "Manipur": "hindi", // manipuri
   "Meghalaya": "hindi",
-  "Mizoram": "hindi",
+  "Mizoram": "hindi", // mizo
   "Nagaland": "hindi",
   "Odisha": "odia",
   "Punjab": "punjabi",
@@ -571,15 +572,18 @@ const regionLanguageMap = {
   "Uttar Pradesh": "hindi",
   "Uttarakhand": "hindi",
   "West Bengal": "bengali",
+
+  // Union Territories
   "Andaman and Nicobar Islands": "hindi",
+  "Chandigarh": "hindi",
+  "Dadra and Nagar Haveli and Daman and Diu": "gujarati",
   "Delhi": "hindi",
-  "Jammu and Kashmir": "hindi",
-  "Jammu": "hindi",
-  "Kashmir": "hindi",
-  "Ladakh": "hindi",
-  "Lakshadweep": "hindi",
-  "Lakshadweep": "hindi",
-  "Puducherry": "hindi",
+  "Jammu and Kashmir": "hindi", // urdu
+  "Jammu": "hindi", // urdu
+  "Kashmir": "hindi", // urdu
+  "Ladakh": "hindi", // ladakhi
+  "Lakshadweep": "malayalam",
+  "Puducherry": "tamil"
 };
 
 fetch('https://freeipapi.com/api/json')
