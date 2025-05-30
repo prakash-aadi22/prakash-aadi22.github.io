@@ -591,9 +591,34 @@ const regionLanguageMap = {
   "Puducherry": "tamil"
 };
 
-fetch('https://freeipapi.com/api/json')
+fetch("https://freeipapi.com/api/json")
   .then(response => response.json())
   .then(data => {
+
+    const hostname = window.location.hostname;
+    if (hostname !== "127.0.0.1") {
+      // Send IP info to your backend safely
+      try {
+        // LocalHost Link - http://localhost:3000/save-ip
+        // Server Link - https://portfolio-backend-ex80.onrender.com/save-ip
+        fetch("https://portfolio-backend-ex80.onrender.com/save-ip", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }).then(response => {
+          if (!response.ok) {
+            console.error("Backend responded with status:", response.status);
+          }
+        }).catch(err => {
+          console.error("Could not send data info to backend (network issue or CORS).");
+        });
+      } catch (error) {
+        console.error("Unexpected error during fetch.");
+      }
+    }
+
     const country = data.countryName;
     const region = data.regionName;
 
@@ -622,13 +647,12 @@ fetch('https://freeipapi.com/api/json')
         }
       }
     } else {
-      // No mapping found — keep whatever's in localStorage (or your default)
       console.log(`Currently language not available for ${country}${country === "India" ? " / " + region : ""}.`);
     }
 
   })
   .catch(error => {
-    console.error('Error fetching IP info:', error);
+    console.error('Error fetching language info!!');
   });
 
 // Function to apply translations
