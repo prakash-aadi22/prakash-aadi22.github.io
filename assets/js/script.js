@@ -793,6 +793,97 @@ document.addEventListener('DOMContentLoaded', () => {
   loadLanguage(currentLanguage); // Load the language from localStorage or default
   setIntroAudio();              // make sure intro is wired up on initial load!
   resetAllAudioIcons();   // ← pause & reset *all* icons back to the default
+
+  // On page load, apply the saved theme or default to dark-theme
+  const validThemes = [
+    "dark-theme",
+    "light-theme",
+    "oceanic-theme",
+    "sunset-theme",
+    "lavender-theme",
+    "forest-theme",
+    "coffee-theme",
+    "aqua-theme",
+    "golden-hour-theme"
+  ];
+
+  let savedTheme = localStorage.getItem("theme");
+
+  if (!validThemes.includes(savedTheme)) {
+    localStorage.removeItem("theme");
+    savedTheme = "dark-theme";
+    localStorage.setItem("theme", savedTheme);
+  }
+
+  localStorage.setItem('theme', savedTheme);
+
+  document.body.classList.add(savedTheme);
+
+  // Update icon and text
+  const themeIcon = document.querySelector(".theme-box ion-icon");
+  const themeIconImg = document.querySelector(".theme-icons-img");
+  const themeNameSpan = document.querySelector(".theme-name");
+
+  const themeIcons = {
+    "dark-theme": "moon-outline",
+    "light-theme": "sunny-outline",
+    "oceanic-theme": "boat-outline",
+    "sunset-theme": "partly-sunny-outline",
+    "lavender-theme": "flower-outline",
+    "forest-theme": "leaf-outline",
+    "coffee-theme": "cafe-outline",
+    "aqua-theme": "water-outline",
+    "golden-hour-theme": "contrast-outline",
+  };
+
+  const themeIconsImg = {
+    "dark-theme": "./assets/theme/dark-theme.png",
+    "light-theme": "./assets/theme/light-theme.png",
+    "oceanic-theme": "./assets/theme/oceanic-theme.png",
+    "sunset-theme": "./assets/theme/sunset-theme.png",
+    "lavender-theme": "./assets/theme/lavender-theme.png",
+    "forest-theme": "./assets/theme/forest-theme.png",
+    "coffee-theme": "./assets/theme/coffee-theme.png",
+    "aqua-theme": "./assets/theme/aqua-theme.png",
+    "golden-hour-theme": "./assets/theme/golden-hour-theme.png",
+  };
+
+  const themeTranslations = {
+    "dark-theme": "Dark",
+    "light-theme": "Light",
+    "oceanic-theme": "Oceanic",
+    "sunset-theme": "Sunset",
+    "lavender-theme": "Lavender",
+    "forest-theme": "Forest",
+    "coffee-theme": "Coffee",
+    "aqua-theme": "Aqua",
+    "golden-hour-theme": "Golden Hour",
+  };
+
+  themeIcon.setAttribute("name", themeIcons[savedTheme]);
+  themeIconImg.setAttribute("src", themeIconsImg[savedTheme]);
+  themeNameSpan.textContent = themeTranslations[savedTheme];
+  themeNameSpan.setAttribute("data-translate", themeTranslations[savedTheme]);
+
+  // Change Language
+  let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
+  loadLanguage(selectedLanguage);
+
+  disableTransitionDuringThemeChange();
+
+
+  // Loader
+  const loader = document.getElementById("loader");
+  const portfolio = document.getElementById("portfolio");
+
+  setTimeout(() => {
+    if (loader) {
+      loader.style.display = "none";
+    }
+    if (portfolio) {
+      portfolio.style.display = "block";
+    }
+  }, 1000);
 });
 
 // Language dropdown switcher logic 
@@ -914,85 +1005,6 @@ function disableTransitionDuringThemeChange() {
   }, 500);
 }
 
-// On page load, apply the saved theme or default to dark-theme
-document.addEventListener('DOMContentLoaded', () => {
-  const validThemes = [
-    "dark-theme",
-    "light-theme",
-    "oceanic-theme",
-    "sunset-theme",
-    "lavender-theme",
-    "forest-theme",
-    "coffee-theme",
-    "aqua-theme",
-    "golden-hour-theme"
-  ];
-
-  let savedTheme = localStorage.getItem("theme");
-
-  if (!validThemes.includes(savedTheme)) {
-    localStorage.removeItem("theme");
-    savedTheme = "dark-theme";
-    localStorage.setItem("theme", savedTheme);
-  }
-
-  localStorage.setItem('theme', savedTheme);
-
-  document.body.classList.add(savedTheme);
-
-  // Update icon and text
-  const themeIcon = document.querySelector(".theme-box ion-icon");
-  const themeIconImg = document.querySelector(".theme-icons-img");
-  const themeNameSpan = document.querySelector(".theme-name");
-
-  const themeIcons = {
-    "dark-theme": "moon-outline",
-    "light-theme": "sunny-outline",
-    "oceanic-theme": "boat-outline",
-    "sunset-theme": "partly-sunny-outline",
-    "lavender-theme": "flower-outline",
-    "forest-theme": "leaf-outline",
-    "coffee-theme": "cafe-outline",
-    "aqua-theme": "water-outline",
-    "golden-hour-theme": "contrast-outline",
-  };
-
-  const themeIconsImg = {
-    "dark-theme": "./assets/theme/dark-theme.png",
-    "light-theme": "./assets/theme/light-theme.png",
-    "oceanic-theme": "./assets/theme/oceanic-theme.png",
-    "sunset-theme": "./assets/theme/sunset-theme.png",
-    "lavender-theme": "./assets/theme/lavender-theme.png",
-    "forest-theme": "./assets/theme/forest-theme.png",
-    "coffee-theme": "./assets/theme/coffee-theme.png",
-    "aqua-theme": "./assets/theme/aqua-theme.png",
-    "golden-hour-theme": "./assets/theme/golden-hour-theme.png",
-  };
-
-  const themeTranslations = {
-    "dark-theme": "Dark",
-    "light-theme": "Light",
-    "oceanic-theme": "Oceanic",
-    "sunset-theme": "Sunset",
-    "lavender-theme": "Lavender",
-    "forest-theme": "Forest",
-    "coffee-theme": "Coffee",
-    "aqua-theme": "Aqua",
-    "golden-hour-theme": "Golden Hour",
-  };
-
-  themeIcon.setAttribute("name", themeIcons[savedTheme]);
-  themeIconImg.setAttribute("src", themeIconsImg[savedTheme]);
-  themeNameSpan.textContent = themeTranslations[savedTheme];
-  themeNameSpan.setAttribute("data-translate", themeTranslations[savedTheme]);
-
-  // Change Language
-  let selectedLanguage = localStorage.getItem('currentLanguage') ?? 'english';
-  loadLanguage(selectedLanguage);
-
-  disableTransitionDuringThemeChange();
-});
-
 // Typing Effect
 function getArticle(word) {
   if (typeof word !== 'string' || word.length === 0) {
@@ -1075,3 +1087,41 @@ function showDisclaimer(message) {
     disclaimer.remove();
   }, 5000);
 }
+
+let $ = s => document.querySelector(s),
+  loaderSVG = $('#mainSVG');
+
+gsap.set('svg', { visibility: 'visible' });
+
+let tl = gsap.timeline({ repeat: -1, defaults: { ease: 'elastic(0.13, 0.5)' } });
+
+tl.to('#box1', { rotation: '+=180', transformOrigin: '100% 0%' })
+  .from('#box5', { rotation: '-=180', transformOrigin: '0% 0%' }, 0)
+  .to('#box1', { rotation: '+=90', transformOrigin: '0% 0%' })
+  .to('#box1', { rotation: '+=90', transformOrigin: '0% 100%' })
+  .to('#box1', { rotation: '+=90', transformOrigin: '100% 100%' })
+  .to('#box1', { rotation: '+=180', transformOrigin: '100% 0%' })
+  .to('#box2', { rotation: '+=180', transformOrigin: '100% 0%' }, '-=0.5')
+  .to('#box2', { rotation: '+=90', transformOrigin: '0% 0%' })
+  .to('#box2', { rotation: '+=90', transformOrigin: '0% 100%' })
+  .to('#box2', { rotation: '+=90', transformOrigin: '100% 100%' })
+  .to('#box2', { rotation: '+=180', transformOrigin: '100% 0%' })
+  .to('#box3', { rotation: '+=180', transformOrigin: '100% 0%' }, '-=0.5')
+  .to('#box3', { rotation: '+=90', transformOrigin: '0% 0%' })
+  .to('#box3', { rotation: '+=90', transformOrigin: '0% 100%' })
+  .to('#box3', { rotation: '+=90', transformOrigin: '100% 100%' })
+  .to('#box3', { rotation: '+=180', transformOrigin: '100% 0%' })
+  .to('#box4', { rotation: '+=180', transformOrigin: '100% 0%' }, '-=0.5')
+  .to('#box4', { rotation: '+=90', transformOrigin: '0% 0%' })
+  .to('#box4', { rotation: '+=90', transformOrigin: '0% 100%' })
+  .to('#box4', { rotation: '+=90', transformOrigin: '100% 100%' })
+  .to('#box4', { rotation: '+=180', transformOrigin: '100% 0%' })
+  .to('#box5', { rotation: '+=180', transformOrigin: '100% 0%' }, '-=0.5')
+  .to('#box5', { rotation: '+=90', transformOrigin: '0% 0%' })
+  .to('#box5', { rotation: '+=90', transformOrigin: '0% 100%' })
+  .to('#box5', { rotation: '+=90', transformOrigin: '100% 100%' })
+  .to('#whole', {
+    duration: 10,
+    x: -(64 * 5),
+    ease: 'none'
+  }, 0);
