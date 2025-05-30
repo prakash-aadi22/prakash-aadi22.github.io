@@ -883,7 +883,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (portfolio) {
       portfolio.style.display = "block";
     }
-  }, 1000);
+  }, 1250);
 });
 
 // Language dropdown switcher logic 
