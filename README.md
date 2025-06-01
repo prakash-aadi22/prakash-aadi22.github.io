@@ -9,6 +9,7 @@
 
 <h2 align="center">
   👉 <a href="https://aditya-prakash-portfolio.vercel.app/" target="_blank">Visit My New Portfolio</a> 👈
+  <p>Link - https://aditya-prakash-portfolio.vercel.app</p>
 </h2>
 
 <br />
