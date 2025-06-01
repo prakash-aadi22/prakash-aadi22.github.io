@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://aditya-prakash-portfolio.vercel.app/" target="_blank">
-    <img src="https://raw.githubusercontent.com/prakash-aadi22/prakash-aadi22.github.io/main/preview.png" alt="New Portfolio Preview" width="600" />
+    <img src="https://aditya-prakash-portfolio.vercel.app/assets/images/p_portfolio.png" alt="New Portfolio Preview" width="600" />
   </a>
 </p>
 
@@ -23,7 +23,7 @@
 
 ## 📢 What's New?
 
-- ⚡ Hosted on [Vercel](https://vercel.com) for blazing-fast performance
+- ⚡ Hosted on [Vercel](https://aditya-prakash-portfolio.vercel.app/) for blazing-fast performance
 - 🎨 Refreshed UI with stunning animations and responsive layout
 - 🧠 Projects, Skills, Experience, and Contact—all revamped
 - 📱 Mobile-friendly and fully responsive
@@ -50,5 +50,3 @@ Thanks for checking out my work! Feel free to connect or leave feedback through 
 ---
 
 > _Crafted with passion by Aditya Prakash ❤️_
-
-![Preview](preview.png)
