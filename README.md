@@ -38,7 +38,7 @@ This GitHub Pages site (`https://prakash-aadi22.github.io/`) now **redirects** t
 But feel free to visit directly:
 
 👉 **New Portfolio Link:**  
-🔗 <h1>`https://aditya-prakash-portfolio.vercel.app/`</h1>
+🔗 <h2>`https://aditya-prakash-portfolio.vercel.app/`</h2>
 
 
 ---
